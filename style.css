@@ -23,11 +23,12 @@ body {
     float: right;
     color: white;
     font-size: 15px;
+    background-color: #717171;
 }
 
 #menu {
     height: 40px;
-    background: gray;
+    background-color: #717171;
     margin-top: 20px;
 }
 
@@ -42,9 +43,62 @@ body {
     display: inline;
     padding: 25px;
     vertical-align: middle;
+    font-size: 18px;
+    font-family: helvetica;
 }
 
 #menu a {
     text-decoration: none;
     color: white;
+}
+
+#popular {
+    display: flex;
+}
+
+#popular_phones, #popular_tablets {
+    margin-top: 15px;
+    width:50%;
+    width: 380px;
+    height: 450px;
+    border: 3px;
+    border-color: #717171;
+    border-style: solid;
+}
+
+#popular_phones {
+    float: left;
+}
+
+#popular_tablets {
+    float: right;
+}
+
+#popular_phones ul, #popular_tablets ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#popular_phones li, #popular_tablets li {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 70px;
+}
+
+#popular_phones h2, #popular_tablets h2 {
+    width: 100%;
+    display: inline;
+    margin: 10px;
+}
+
+.phone_icon, .tablet_icon {
+    display: inline;
+    width: auto;
+    height: 100%;
+}
+
+.phone_name, .tablet_name {
+    display: inline;
+    width: 100px;
 }
