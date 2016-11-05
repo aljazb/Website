@@ -1,0 +1,50 @@
+body {
+    width: 800px;
+    margin: auto;
+}
+
+#top_bar {
+    background: #515151;
+    height: 55px;
+    width: 800px;
+}
+
+#logo {
+    width: 160px;
+    height: 40px;
+    padding: 10px;
+}
+
+#login {
+    display: inline;
+    background: gray;
+    height: 100%;
+    width: 100px;
+    float: right;
+    color: white;
+    font-size: 15px;
+}
+
+#menu {
+    height: 40px;
+    background: gray;
+    margin-top: 20px;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu li {
+    display: inline;
+    padding: 25px;
+    vertical-align: middle;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+}
