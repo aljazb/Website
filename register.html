@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GadgetFreak</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="top_bar">
+        <img id="logo" src="images/logo.png"></img>
+        <ul id="login">
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+        </ul>
+    </div>
+    <div id="menu">
+        <ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="">Top Rated</a></li>
+            <li><a href="">Just Released</a></li>
+            <li><a href="">Budget</a></li>
+            <li><a href="">Recommend</a></li>
+        </ul>
+    </div>
+   
+   <div id="register">
+			<form id="register_form" autocomplete="on"> 
+			<h1>Register</h1>
+			<div>
+				<label>Name</label>
+				<input id="name_register" name="name_register" type="text" placeholder="John" />
+			</div>
+			<div>
+				<label>Surname</label>
+				<input id="surname_register" name="surname_register" type="text" placeholder="Doe" />
+			</div>
+			<div>
+				<label>Sex</label>
+				<select>
+					<option selected disabled>Select</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<div>
+				<label>Username</label>
+				<input id="username_register" name="username_register" required="required" type="text" placeholder="mycoolusername99" />
+			</div>
+			<div>
+				<label>Email</label>
+				<input id="email_register" name="email_register" required="required" type="email" placeholder="name.surname@mail.com"/> 
+			</div>
+			<div>
+				<label>Password</label>
+				<input id="password_register" name="password_register" required="required" type="password" placeholder="safePassw0rd"/>
+			</div>
+			<div>
+				<label>Confirm password</label>
+				<input id="password_confirm_register" name="password_confirm_register" required="required" type="password" placeholder="safePassw0rd"/>
+			</div>
+			<div>
+				<label>Write anything you want</label>
+				<textarea name="description_area" form="register_form">List your skills, devices,...</textarea>
+			</div>
+				<input type="checkbox" name="terms" value="terms" required="required">I accept the terms and conditions</input>
+			</div>
+			</div>
+				<input type="submit" value="Register"/> 
+			</div>
+			<p>  
+				Already a member?
+				<a href="login.html">Go and login</a>
+			</p>
+		</form>
+	</div>
+</body>
+</html>
