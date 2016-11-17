@@ -1,5 +1,6 @@
 body {
     width: 960px;
+    /*width: 80%;*/
     margin: auto;
     background-color: #EEEEEE;
 }
@@ -7,6 +8,14 @@ body {
 * {
     font-family: Helvetica;
     color: #373D3F;
+}
+
+p {
+    font-size: 14px;
+}
+
+time {
+    font-size: 12px;
 }
 
 #top_bar {
@@ -28,14 +37,25 @@ body {
 #login {
     display: inline;
     height: 100%;
-    width: 100px;
+    width: 90px;
     float: right;
     padding: 0;
     margin: 0;
+    margin-top: 20px;
     list-style-type: none;
 }
 
+#login li {
+    margin-top: 5px;
+}
+
+.login_element {
+    text-decoration: none;
+    font-size: 20px;
+}
+
 #menu {
+    border-radius: 25px;
     height: 40px;
     background-color: #6699CC;
     margin-top: 20px;
@@ -60,9 +80,11 @@ body {
 }
 
 .side_menu {
+    border-radius: 25px;
     width: 49%;
-    height: 500px;
+    height: 480px;
     background-color: white;
+    margin-bottom: 20px;
 }
 
 .menu_title {
@@ -89,10 +111,10 @@ body {
 }
 
 .full_menu {
+    border-radius: 25px;
     float: left;
-    margin-top: 20px;
+    margin-bottom: 20px;
     width: 100%;
-    height: 250px;
     background-color: white;
 }
 
@@ -111,9 +133,9 @@ body {
 }
 
 .side_menu li {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 15px;
-    height: 100px;
+    height: 70px;
 }
 
 
@@ -127,7 +149,7 @@ body {
 .device_info {
     float: right;
     display: inline;
-    width: 74%;
+    width: 82%;
     height: 100%;
 }
 
@@ -135,14 +157,18 @@ body {
     padding-top: 5px;
     display: block;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     color: #6699CC;
     
 }
 
 .short_description {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    width: 93%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .star_icon {
@@ -157,9 +183,100 @@ body {
     float: left;
 }
 
-.device_info {
+.user_icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.topic_info {
+    height: 40px;
+    width: 100%;
+}
+
+.topic_head {
+    color: #6699CC;
+    margin-bottom: 4px;
+    width: 90%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.heart_icon {
+    height: 15px;
+    width: auto;
+}
+
+.like_section {
     float: right;
+    width: 75px;
+}
+
+.like_count {
     display: inline;
-    width: 74%;
+}
+
+#discussion {
+    height: 480px;
+}
+
+#android_devices {
+    height: 290px;
+}
+
+.left_list {
+    float: left;
+    width: 50%;
     height: 100%;
+}
+
+.device_list {
+    width: 50%;
+    height: 100%;
+}
+
+.device_list li {
+    padding: 10px;
+}
+
+#left_device_list {
+    float: left;
+}
+
+#right_device_list {
+    float: right;
+}
+
+.full_menu_devices {
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.side_menu_devices {
+    border-radius: 25px;
+    width: 49%;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.side_menu_devices ul, .full_menu_devices ul {
+    padding: 0;
+    margin: 0;
+}
+
+.side_menu_devices li, .full_menu_devices li {
+    margin-left: 30px;
+    height: 20px;
+}
+
+.device_list a {
+    color: #6699CC;
+    font-size: 20px;
+    text-decoration: none;
 }

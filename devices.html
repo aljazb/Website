@@ -8,62 +8,69 @@
 <body>
     <div id="top_bar">
         <img id="logo" src="images/logo.png"></img>
+        <h1 id="title">GadgetFreak</h1>
         <ul id="login">
-            <li><a href="">Login</a></li>
-            <li><a href="register.html">Register</a></li>
+            <li><b><a href="login.html" class="login_element">Login</a></b></li>
+            <li><b><a href="register.html" class="login_element">Register</a></b></li>
         </ul>
     </div>
     <div id="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="devices.html">Devices</a></li>
-            <li><a href="">Top Rated</a></li>
-            <li><a href="">Just Released</a></li>
-            <li><a href="">Budget</a></li>
-            <li><a href="">Recommend</a></li>
+            <li><a href="top-rated.html">Top Rated</a></li>
+            <li><a href="just-released.html">Just Released</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
         </ul>
     </div>
     
-    <android-devices id="android_devices" class="full_menu">
-        <h2>Android</h2>
+    <android-devices id="android_devices" class="full_menu_devices">
+        <h2 class="menu_title">Android</h2>
+        <div id="left_device_list" class="device_list">
+            <ul>
+                <li><b><a href="">Samsung</a></b></li>
+                <li><b><a href="">HTC</a></b></li>
+                <li><b><a href="">Huawei</a></b></li>
+                <li><b><a href="">LG</a></b></li>
+                <li><b><a href="">Motorola</a></b></li>
+            </ul>
+        </div>
+        <div id="right_device_list" class="device_list">
+            <ul class="device_list">
+                <li><b><a href="">Sony</a></b></li>
+                <li><b><a href="">Xiaomi</a></b></li>
+                <li><b><a href="">OnePlus</a></b></li>
+                <li><b><a href="">ASUS</a></b></li>
+                <li><b><a href="">Zopo</a></b></li>
+            </ul>
+        </div>
     </android-devices>
-    <ios-devices id="ios_devices" class="side_menu">
-        <h2>iOS</h2>
-        <ul>
-            <li><a href="">Samsung</a></li>
-            <li><a href="">Samsung</a></li>
-            <li><a href="">Samsung</a></li>
-            <li><a href="">Samsung</a></li>
-            <li><a href="">Samsung</a></li>
+    <ios-devices id="ios_devices" class="side_menu_devices">
+        <h2 class="menu_title">iOS</h2>
+        <ul class="device_list">
+            <li><b><a href="">Apple</a></b></li>
         </ul>
     </ios-devices>
-    <windows-phone-devices id="windows_phone_devices" class="side_menu">
-        <h2>Windows Phone</h2>
-        <ul>
-            <li>
-                <img src="images/iphone_7.png" class="phone_icon"></img>
-                <h3 class="phone_name">Apple iPhone 7</h3>
-            </li>
-            <li>
-                <img src="images/iphone_7.png" class="phone_icon"></img>
-                <h3 class="phone_name">Apple iPhone 7</h3>
-            </li>
-            <li>
-                <img src="images/iphone_7.png" class="phone_icon"></img>
-                <h3 class="phone_name">Apple iPhone 7</h3>
-            </li>
-            <li>
-                <img src="images/iphone_7.png" class="phone_icon"></img>
-                <h3 class="phone_name">Apple iPhone 7</h3>
-            </li>
-             <li>
-                <img src="images/iphone_7.png" class="phone_icon"></img>
-                <h3 class="phone_name">Apple iPhone 7</h3>
-            </li>
+    <windows-phone-devices id="windows_phone_devices" class="side_menu_devices">
+        <h2 class="menu_title">Windows Phone</h2>
+        <ul class="device_list">
+            <li><b><a href="">Microsoft</a></b></li>
+            <li><b><a href="">Nokia</a></b></li>
+            <li><b><a href="">HTC</a></b></li>
         </ul>
     </windows-phone-devices>
-    <other-devices id="other_devices" class="full_menu">
-        <h2>Other</h2>
+    <other-devices id="other_devices" class="full_menu_devices">
+        <h2 class="menu_title">Other</h2>
+        <ul id="left_device_list" class="device_list">
+            <li><b><a href="">Blackberry</a></b></li>
+            <li><b><a href="">Nokia</a></b></li>
+            <li><b><a href="">Motorola</a></b></li>
+        </ul>
+        <ul id="right_device_list" class="device_list">
+            <li><b><a href="">Sony Ericsson</a></b></li>
+            <li><b><a href="">Sagem</a></b></li>
+        </ul>
     </other-devices>
     
 </body>
