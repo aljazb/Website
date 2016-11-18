@@ -1,6 +1,6 @@
 body {
     width: 960px;
-    /*width: 80%;*/
+    /*width: 90%;*/
     margin: auto;
     background-color: #EEEEEE;
 }
@@ -279,4 +279,112 @@ time {
     color: #6699CC;
     font-size: 20px;
     text-decoration: none;
+}
+
+.device_icon_big {
+    width: auto;
+    height: 100%;
+    vertical-align: text-top;
+    float: left;
+}
+
+.full_menu_big {
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.full_menu_big ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.full_menu_big li {
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.device_icon_big {
+    width: auto;
+    height: 100%;
+    vertical-align: text-top;
+    float: left;
+}
+
+#just_released {
+    height: 950px;
+}
+
+.device_info_big {
+    float: left;
+    display: inline;
+    width: 25%;
+    height: 100%;
+}
+
+.discussion_right {
+    float: left;
+    display: inline;
+    width: 55%;
+    height: 100%;
+}
+
+.discussion_right ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.rating_text {
+    display: inline-block;  
+    width: 100px;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.stars_group {
+    display: inline; 
+    width: 50%;
+}
+
+.discussion_right li {
+    height: 25px;
+}
+
+#login_menu {
+    height: 340px;
+}
+
+#register_menu {
+    height: 880px;
+}
+
+.form {
+    margin: 20px;
+}
+
+.form_field input, select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #6699CC;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
 }

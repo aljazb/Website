@@ -21,22 +21,21 @@
             <li><a href="top-rated.html">Top Rated</a></li>
             <li><a href="just-released.html">Just Released</a></li>
             <li><a href="budget.html">Budget</a></li>
-            <li><a href="recommend.html">Recommend</a></li>
         </ul>
     </div>
    
-   <div id="register">
-			<form id="register_form" autocomplete="on"> 
-			<h1>Register</h1>
-			<div>
+   <register-form id="register_menu" class="full_menu">
+		<h1 class="menu_title">Register</h1>
+		<form id="register_form" class="form" autocomplete="on"> 
+			<div class="form_field">
 				<label>Name</label>
 				<input id="name_register" name="name_register" type="text" placeholder="John" />
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Surname</label>
 				<input id="surname_register" name="surname_register" type="text" placeholder="Doe" />
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Sex</label>
 				<select>
 					<option selected disabled>Select</option>
@@ -45,28 +44,28 @@
 					<option value="other">Other</option>
 				</select>
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Username</label>
 				<input id="username_register" name="username_register" required="required" type="text" placeholder="mycoolusername99" />
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Email</label>
 				<input id="email_register" name="email_register" required="required" type="email" placeholder="name.surname@mail.com"/> 
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Password</label>
 				<input id="password_register" name="password_register" required="required" type="password" placeholder="safePassw0rd"/>
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Confirm password</label>
 				<input id="password_confirm_register" name="password_confirm_register" required="required" type="password" placeholder="safePassw0rd"/>
 			</div>
-			<div>
+			<div class="form_field">
 				<label>Write anything you want</label>
-				<textarea name="description_area" form="register_form">List your skills, devices,...</textarea>
+				<textarea name="description_area" form="register_form" placeholder="List your skills, devices,..."></textarea>
 			</div>
 				<input type="checkbox" name="terms" value="terms" required="required">I accept the terms and conditions</input>
-			</div>
+			</div class="form_field">
 			</div>
 				<input type="submit" value="Register"/> 
 			</div>
@@ -75,6 +74,6 @@
 				<a href="login.html">Go and login</a>
 			</p>
 		</form>
-	</div>
+	</register-form>
 </body>
 </html>
