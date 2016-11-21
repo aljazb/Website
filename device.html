@@ -3,6 +3,7 @@
 <head>
     <title>GadgetFreak</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="graph.js"></script>
 </head>
 
 <body>
@@ -16,90 +17,179 @@
     </div>
     <div id="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="devices.html">Devices</a></li>
-            <li><a href="top-rated.html">Top Rated</a></li>
-            <li><a href="just-released.html">Just Released</a></li>
-            <li><a href="budget.html">Budget</a></li>
+            <li><a href="index.html" class="menu_link">Home</a></li>
+            <li><a href="devices.html" class="menu_link">Devices</a></li>
+            <li><a href="top-rated.html" class="menu_link">Top Rated</a></li>
+            <li><a href="just-released.html" class="menu_link">Just Released</a></li>
+            <li><a href="budget.html" class="menu_link">Budget</a></li>
         </ul>
     </div>
     
-    <div id="overview_area">
-       <img src="images/iphone_7.png" class="phone_icon"></img>
-            <h2 class="device_name">Apple iPhone 7</h2>
+    <div id="overview_area" class="full_menu">
+        <img src="images/iphone_7.png" class="device_icon_full"></img>
+        <device-info class="device_info_full">
+            <b><a href="devices.html" class="device_name_link">Apple iPhone 7</a></b>
             <p class="short_description">New phone from apple, features 2 cameras</p>
             <div id="preformance_rating">
-                <p class="rating_text">Preformance</p>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
+                <p class="rating_text"><b>Preformance</b></p>
+                <stars class="stars_group">
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                </stars>
             </div>
             <div id="build_quality_rating">
-                <p class="rating_text">Build quality</p>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
+                <p class="rating_text"><b>Build quality</b></p>
+                <stars class="stars_group">
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                </stars>
             </div>
             <div id="camera_rating">
-                <p class="rating_text">Camera</p>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
+                <p class="rating_text"><b>Camera</b></p>
+                <stars class="stars_group">
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                </stars>
             </div>
             <div id="price_rating">
-                <p class="rating_text">Price</p>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
-                <img src="images/star.png"></img>
+                <p class="rating_text"><b>Price</b></p>
+                <stars class="stars_group">
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                    <img src="images/star.png" class="star_icon"></img>
+                </stars>
             </div>
+        </device-info>
+        <canvas id="graph_canvas"></canvas>
     </div>
-    <div id="specs_area">
-        <h2>Specifications</h2>
-        <table>
-            <tr>
-                <th>Property</th>
-                <th>Google Pixel</th>
-            </tr>
-            <tr>
-                <td>Processor</th>
-                <td>Snapdragon 820</th>
-            </tr>
-            <tr>
-                <td>Camera</td>
-                <td>Sony 20MP</td>
-            </tr>
-            <tr>
-                <td>Battery</td>
-                <td>4000mAh</td>
-            </tr>
-        </table>
-    </div>
-    <div id="discussion">
-        <h2>Discussion</h2>
-        <button>New topic</button>
-        
+    <table>
+        <tr id="first_row">
+            <th>Specifications</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Dimensions</th>
+            <td>138.3 x 67.1 x 7.1 mm</th>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>138 g</td>
+        </tr>
+        <tr>
+            <td>Display</td>
+            <td>LED-backlit IPS LCD 750 x 1334 pixels</td>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>iOS 10.1</td>
+        </tr>
+        <tr>
+            <td>Chipset</td>
+            <td>Apple A10 Fusion</td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>32/128/256 GB, 2 GB RAM</td>
+        </tr>
+        <tr>
+            <td>Camera</td>
+            <td>12 MP, f/1.8, 28mm, OIS, quad-LED flash</td>
+        </tr>
+        <tr id="last_row">
+            <td>Battery</td>
+            <td>Non-removable Li-Ion 1960 mAh</td>
+        </tr>
+    </table>
+    <div id="discussion" class="full_menu">
+        <div class="menu_title_divided">
+            <h2>Discussion</h2>
+            <b><a href="" class="new_topic_link">+ New topic</a></b>
+        </div>
         <ul>
             <li>
-                <img src="images/star.png" class="user_icon"></img>
-                <h3 class="topic_head">Which one is better? iPhone or Galaxy S...</h3>
-                <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                <img src="images/heart.png"></img>
-                <p class="like_count">10</p>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
             </li>
             <li>
-                <img src="images/star.png" class="user_icon"></img>
-                <h3 class="topic_head">Which one is better? iPhone or Galaxy S...</h3>
-                <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                <img src="images/heart.png"></img>
-                <p class="like_count">10</p>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="images/profile_picture_1.png" class="user_icon"></img>
+                <div class="topic_info">
+                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
+                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <div class="like_section">
+                        <img src="images/heart.png" class="heart_icon"></img>
+                        <p class="like_count">10</p>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>

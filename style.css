@@ -14,6 +14,14 @@ p {
     font-size: 14px;
 }
 
+a:hover {
+    color: #CC6600;
+}
+
+input[type=submit]:hover {
+    color: #CC6600;
+}
+
 time {
     font-size: 12px;
 }
@@ -74,7 +82,7 @@ time {
     font-size: 18px;
 }
 
-#menu a {
+.menu_link {
     text-decoration: none;
     color: white;
 }
@@ -102,7 +110,7 @@ time {
     float: left;
 }
 
-.menu_title_divided a {
+.discussion_link {
     float: right;
     padding: 15px;
     text-decoration: none;
@@ -128,7 +136,6 @@ time {
 
 .side_menu ul, .full_menu ul {
     padding: 0;
-    margin: 0;
     list-style-type: none;
 }
 
@@ -177,15 +184,9 @@ time {
 }
 
 .user_icon {
-    width: auto;
-    height: 50%;
-    vertical-align: text-top;
+    display: inline;
     float: left;
-}
-
-.user_icon {
-    width: 40px;
-    height: 40px;
+    width: 5%;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -202,6 +203,8 @@ time {
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    display: inline-block;
+    font-size: 20px;
 }
 
 .heart_icon {
@@ -275,7 +278,7 @@ time {
     height: 20px;
 }
 
-.device_list a {
+.brand_link {
     color: #6699CC;
     font-size: 20px;
     text-decoration: none;
@@ -387,4 +390,92 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 17px;
+}
+
+.device_info_full {
+    float: left;
+    display: inline;
+    width: 30%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.device_icon_full {
+    width: auto;
+    height: 210px;
+    vertical-align: text-top;
+    float: left;
+    margin: 10px;
+    
+}
+
+#overview_area {
+    height: 230px;
+}
+
+#graph_canvas {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    height: 210px;
+    width: 300px;
+}
+
+#specs_area {
+    height: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+    width: 100%;
+    margin-bottom: 30px;
+    background: black;
+}
+
+th, td {
+    padding: 5px;
+    padding-left: 30px;
+    height: 30px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+tr:first-child {
+    background-color: #EEEEEE;
+}
+
+tr:last-child {
+    background-color: #EEEEEE;
+}
+
+th {
+    background-color: #6699CC;
+    color: white;
+}
+
+#first_row th:first-child {
+    border-radius: 25px 0 0 0;
+}
+
+#first_row th:last-child {
+    border-radius: 0 25px 0 0;
+}
+
+#last_row td:last-child {
+    border-radius: 0 0 25px 0;
+    background-color: white;
+}
+
+#last_row td:first-child {
+    border-radius: 0 0 0 25px;
+    background-color: white;
 }

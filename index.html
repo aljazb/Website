@@ -16,15 +16,15 @@
     </div>
     <div id="menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="devices.html">Devices</a></li>
-            <li><a href="top-rated.html">Top Rated</a></li>
-            <li><a href="just-released.html">Just Released</a></li>
-            <li><a href="budget.html">Budget</a></li>
+            <li><a href="index.html" class="menu_link">Home</a></li>
+            <li><a href="devices.html" class="menu_link">Devices</a></li>
+            <li><a href="top-rated.html" class="menu_link">Top Rated</a></li>
+            <li><a href="just-released.html" class="menu_link">Just Released</a></li>
+            <li><a href="budget.html" class="menu_link">Budget</a></li>
         </ul>
     </div>
     
-    <div id="popular_phones" class="side_menu">
+    <popular-phones id="popular_phones" class="side_menu">
         <h2 class="menu_title">Popular phones</h2>
         <ul>
             <li>
@@ -88,8 +88,8 @@
                 </div>
             </li>
         </ul>
-    </div>
-    <div id="popular_tablets" class="side_menu">
+    </popular-phones>
+    <popular-tablets id="popular_tablets" class="side_menu">
         <h2 class="menu_title">Popular tablets</h2>
         <ul>
            <li>
@@ -153,91 +153,26 @@
                 </div>
             </li>
         </ul>
-    </div>
-    <div id="discussion" class="full_menu">
+    </popular-tablets>
+    <discussion id="discussion" class="full_menu">
         <div class="menu_title_divided">
             <h2>Discussion</h2>
-            <b><a href="" class="new_topic">+ New topic</a></b>
+            <b><a href="" class="discussion_link">+ New topic</a></b>
         </div>
         <ul>
             <li>
                 <img src="images/profile_picture_1.png" class="user_icon"></img>
                 <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
+                    <b><a class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </a></b>
+                    <time class="topic_date" datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
                     <div class="like_section">
                         <img src="images/heart.png" class="heart_icon"></img>
                         <p class="like_count">10</p>
                     </div>
                 </div>
             </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/profile_picture_1.png" class="user_icon"></img>
-                <div class="topic_info">
-                    <h3 class="topic_head">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </h3>
-                    <time datetime="2016-01-01 10:00">01.01.2016 at 10:00</time>
-                    <div class="like_section">
-                        <img src="images/heart.png" class="heart_icon"></img>
-                        <p class="like_count">10</p>
-                    </div>
-                </div>
-            </li>
+            
         </ul>
-    </div>
+    </discussion>
 </body>
 </html>
