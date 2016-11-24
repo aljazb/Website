@@ -103,11 +103,30 @@ time {
 .menu_title_divided {
     height: 50px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
-.menu_title_divided h2 {
+/*.menu_title_divided h2 {
     margin: 15px;
-    float: left;
+    display: inline;
+    margin-top: 30px;
+}*/
+
+.answer img {
+    margin-left: 5%;
+}
+
+.answer h3 {
+    width: 85%;
+}
+
+.answer time {
+    margin-left: 11%;
+}
+
+#discussion li {
+    display: block;
+    margin-bottom: 20px;
 }
 
 .discussion_link {
@@ -124,6 +143,7 @@ time {
     margin-bottom: 20px;
     width: 100%;
     background-color: white;
+    height: auto;
 }
 
 #popular_phones, #ios_devices{
@@ -196,10 +216,52 @@ time {
     width: 100%;
 }
 
+.topic_info_forum {
+    height: 100px;
+    width: 100%;
+}
+
+.topic_date_forum {
+    float: left;
+    margin-left: 7%;
+}
+
+.user_icon_forum {
+    display: inline-block;
+    float: left;
+    width: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.topic_head_forum {
+    color: #6699CC;
+    margin-bottom: 4px;
+    width: 90%;
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+    margin-top: 0;
+}
+
+.topic_answer_forum {
+    margin-bottom: 4px;
+    width: 90%;
+    display: inline-block;
+    font-size: 18px;
+    float: left;
+    margin-top: 0;
+}
+
+.menu_title_forum {
+    margin-top: 15px;
+}
+
 .topic_head {
     color: #6699CC;
     margin-bottom: 4px;
     width: 90%;
+    text-decoration: none;
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -219,14 +281,6 @@ time {
 
 .like_count {
     display: inline;
-}
-
-#discussion {
-    height: 480px;
-}
-
-#android_devices {
-    height: 290px;
 }
 
 .left_list {
@@ -263,7 +317,7 @@ time {
 .side_menu_devices {
     border-radius: 25px;
     width: 49%;
-    height: 200px;
+    height: auto;
     background-color: white;
     margin-bottom: 20px;
 }
@@ -305,10 +359,17 @@ time {
     list-style-type: none;
 }
 
+.full_menu_big_li {
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .full_menu_big li {
     height: 150px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-bottom: 25px;
 }
 
 .device_icon_big {
@@ -316,10 +377,6 @@ time {
     height: 100%;
     vertical-align: text-top;
     float: left;
-}
-
-#just_released {
-    height: 950px;
 }
 
 .device_info_big {
@@ -356,14 +413,6 @@ time {
 
 .discussion_right li {
     height: 25px;
-}
-
-#login_menu {
-    height: 340px;
-}
-
-#register_menu {
-    height: 880px;
 }
 
 .form {
@@ -410,10 +459,6 @@ input[type=submit] {
     
 }
 
-#overview_area {
-    height: 230px;
-}
-
 #graph_canvas {
     float: right;
     margin-top: 10px;
@@ -422,8 +467,9 @@ input[type=submit] {
     width: 300px;
 }
 
-#specs_area {
-    height: 300px;
+#discussion_h {
+    float: left;
+    margin: 15px;
 }
 
 table {
