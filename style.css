@@ -1,6 +1,5 @@
 body {
     width: 960px;
-    /*width: 90%;*/
     margin: auto;
     background-color: #EEEEEE;
 }
@@ -64,7 +63,7 @@ time {
 
 #menu {
     border-radius: 25px;
-    height: 40px;
+    height: auto;
     background-color: #6699CC;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -73,13 +72,20 @@ time {
 #menu ul {
     padding: 0;
     padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
 }
 
 #menu li {
     display: inline;
-    padding: 25px;
+    padding: 3%;
     font-size: 18px;
+}
+
+#menu a {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .menu_link {
@@ -105,12 +111,6 @@ time {
     width: 100%;
     margin-bottom: 10px;
 }
-
-/*.menu_title_divided h2 {
-    margin: 15px;
-    display: inline;
-    margin-top: 30px;
-}*/
 
 .answer img {
     margin-left: 5%;
@@ -217,7 +217,7 @@ time {
 }
 
 .topic_info_forum {
-    height: 100px;
+    height: 150px;
     width: 100%;
 }
 
@@ -524,4 +524,69 @@ th {
 #last_row td:first-child {
     border-radius: 0 0 0 25px;
     background-color: white;
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        width: 90%;
+    }
+    
+    .side_menu, .device_list, .side_menu_devices {
+        width: 100%;
+        float: left;
+    }
+    
+    .discussion_right {
+        display: none;
+    }
+    
+    .device_info_big {
+        width: 70%;
+    }
+    
+    .device_info_full {
+        width: 40%;
+    }
+    
+    #graph_canvas {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu_link {
+        display: block;
+    }
+    
+    .device_icon_big {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    
+    .device_info_full {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .device_icon, .user_icon {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    
+    .menu_title_divided a {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #title {
+        font-size: 17px;
+    }
+    
+    .star_icon {
+        height: 15px;
+        width: auto;
+    }
 }
