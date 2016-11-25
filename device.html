@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>GadgetFreak</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="graph.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type="text/javascript" src="scripts/graph.js"></script>
 </head>
 
 <body>
@@ -28,11 +28,11 @@
     <div id="overview_area" class="full_menu">
         <img src="images/iphone_7.png" class="device_icon_full"></img>
         <device-info class="device_info_full">
-            <b><a href="devices.html" class="device_name_link">Apple iPhone 7</a></b>
+            <b><h2 class="device_name">Apple iPhone 7</h2></b>
             <p class="short_description">New phone from apple, has 2 cameras</p>
             <div id="preformance_rating">
                 <p class="rating_text"><b>Preformance</b></p>
-                <stars class="stars_group">
+                <stars class="stars_group" id="preformance_stars">
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
@@ -42,7 +42,7 @@
             </div>
             <div id="build_quality_rating">
                 <p class="rating_text"><b>Build quality</b></p>
-                <stars class="stars_group">
+                <stars class="stars_group" id="build_stars">
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
@@ -52,7 +52,7 @@
             </div>
             <div id="camera_rating">
                 <p class="rating_text"><b>Camera</b></p>
-                <stars class="stars_group">
+                <stars class="stars_group" id="camera_stars">
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
@@ -62,7 +62,7 @@
             </div>
             <div id="price_rating">
                 <p class="rating_text"><b>Price</b></p>
-                <stars class="stars_group">
+                <stars class="stars_group" id="price_stars">
                     <img src="images/star.png" class="star_icon"></img>
                     <img src="images/star.png" class="star_icon"></img>
                 </stars>

@@ -186,7 +186,12 @@ time {
     text-decoration: none;
     font-size: 18px;
     color: #6699CC;
-    
+}
+
+.device_name {
+    display: block;
+    font-size: 20px;
+    color: #6699CC;
 }
 
 .short_description {
@@ -429,7 +434,7 @@ time {
     box-sizing: border-box;
 }
 
-input[type=submit] {
+input[type=submit], #snap_photo {
     width: 100%;
     background-color: #6699CC;
     color: white;
@@ -516,6 +521,34 @@ th {
     border-radius: 0 25px 0 0;
 }
 
+#camera_canvas {
+    width: 35%;
+    height: auto;
+    margin-left: 5%;
+}
+
+#camera_section {
+    width: 100%;
+    height: auto;
+}
+
+#left_camera_section {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+}
+
+#viewfinder {
+    width: 100%;
+    height: auto;
+    display: inline;
+}
+
+#snap_photo {
+    display: block;
+    width: 85%;
+}
+
 #last_row td:last-child {
     border-radius: 0 0 25px 0;
     background-color: white;
@@ -567,6 +600,16 @@ th {
     .device_info_full {
         width: 70%;
     }
+    
+    #left_camera_section {
+        width: 70%;
+        height: auto;
+    }
+    
+    #camera_canvas {
+        width: 70%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -574,6 +617,10 @@ th {
         display: none;
         width: 0px;
         height: 0px;
+    }
+    
+    .device_info {
+        width: 100%;
     }
     
     .menu_title_divided a {
@@ -586,7 +633,7 @@ th {
     }
     
     .star_icon {
-        height: 15px;
+        height: 13px;
         width: auto;
     }
 }
