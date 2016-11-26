@@ -4,11 +4,13 @@
     <title>GadgetFreak</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <script type="text/javascript" src="scripts/camera.js"></script>
+    <script type="text/javascript" src="scripts/register.js"></script>
+    <meta charset="UTF-8">
 </head>
 
 <body>
     <div id="top_bar">
-        <img id="logo" src="images/logo.png"></img>
+        <img id="logo" alt="Logo" src="images/logo.png">
         <h1 id="title">GadgetFreak</h1>
         <ul id="login">
             <li><b><a href="login.html" class="login_element">Login</a></b></li>
@@ -65,6 +67,7 @@
 				<label>Confirm password</label>
 				<input id="password_confirm_register" name="password_confirm_register" required="required" type="password" placeholder="safePassw0rd"/>
 			</div>
+			<p id="password_match"></p>
 			<div class="form_field">
 				<label>Write anything you want</label>
 				<textarea name="description_area" form="register_form" placeholder="List your skills, devices,..."></textarea>
@@ -72,7 +75,7 @@
 				<input type="checkbox" name="terms" value="terms" required="required">I accept the terms and conditions</input>
 			</div class="form_field">
 			</div>
-				<input type="submit" value="Register"/> 
+				<input type="submit" value="Register" id="submit_button"/> 
 			</div>
 			<p>  
 				Already a member?

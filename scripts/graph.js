@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', main, false);
 
 function main() {
-    var preformance = document.getElementById("preformance_stars").children.length;
+    var performance = document.getElementById("performance_stars").children.length;
     var build = document.getElementById("build_stars").children.length;
     var camera = document.getElementById("camera_stars").children.length;
     var price = document.getElementById("price_stars").children.length;
@@ -21,7 +21,7 @@ function main() {
     var ctx = graphCanvas.getContext("2d");
     ctx.strokeStyle = '#373D3F';
     ctx.font = " bold 10px Helvetica";
-    ctx.fillText("Preformance",120,10);
+    ctx.fillText("Performance",120,10);
     ctx.fillText("Built quality",130,134);
     ctx.fillText("Camera",0,70);
     ctx.fillText("Price",260,70);
@@ -32,8 +32,8 @@ function main() {
     ctx.lineTo(260,67);
     
     ctx.moveTo(centX-camera*stepX, centY);
-    ctx.lineTo(centX, centY-preformance*stepY);
-    ctx.moveTo(centX, centY-preformance*stepY);
+    ctx.lineTo(centX, centY-performance*stepY);
+    ctx.moveTo(centX, centY-performance*stepY);
     ctx.lineTo(centX+price*stepX, centY);
     ctx.moveTo(centX+price*stepX, centY);
     ctx.lineTo(centX, centY+build*stepY);

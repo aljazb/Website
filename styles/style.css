@@ -113,11 +113,11 @@ time {
 }
 
 .answer img {
-    margin-left: 5%;
+    margin-top: 10px;
 }
 
 .answer h3 {
-    width: 85%;
+    width: 90%;
 }
 
 .answer time {
@@ -222,8 +222,9 @@ time {
 }
 
 .topic_info_forum {
-    height: 150px;
+    height: auto;
     width: 100%;
+    margin-top: 10px;
 }
 
 .topic_date_forum {
@@ -343,11 +344,22 @@ time {
     text-decoration: none;
 }
 
+.answer {
+    margin-left: 5%;
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 10px;
+    width: 95%;
+    background-color: white;
+    height: auto;
+}
+
 .device_icon_big {
     width: auto;
     height: 100%;
     vertical-align: text-top;
     float: left;
+    margin-right: 20px;
 }
 
 .full_menu_big {
@@ -542,6 +554,12 @@ th {
     width: 100%;
     height: auto;
     display: inline;
+}
+
+#password_match {
+    color: #CC6600;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 #snap_photo {
