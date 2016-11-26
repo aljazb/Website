@@ -590,7 +590,7 @@ th {
         width: 90%;
     }
     
-    .side_menu, .device_list, .side_menu_devices {
+    .side_menu, .left_device_list, .right_device_list, .side_menu_devices {
         width: 100%;
         float: left;
     }
