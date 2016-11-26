@@ -304,12 +304,20 @@ time {
     padding: 10px;
 }
 
-#left_device_list {
+.left_device_list {
     float: left;
+    width: 50%;
+    height: 100%;
 }
 
-#right_device_list {
+.right_device_list {
     float: right;
+    width: 50%;
+    height: 100%;
+}
+
+.right_device_list li, .left_device_list li {
+    padding: 10px;
 }
 
 .full_menu_devices {

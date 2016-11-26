@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>GadgetFreak</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
@@ -27,7 +27,7 @@
         </ul>
     </div>
    
-   <register-form id="register_menu" class="full_menu">
+   <div id="register_menu" class="full_menu">
 		<h1 class="menu_title">Register</h1>
 		<form id="register_form" class="form" autocomplete="on"> 
 			<div id="camera_section">
@@ -72,9 +72,10 @@
 				<label>Write anything you want</label>
 				<textarea name="description_area" form="register_form" placeholder="List your skills, devices,..."></textarea>
 			</div>
-				<input type="checkbox" name="terms" value="terms" required="required">I accept the terms and conditions</input>
-			</div class="form_field">
+			<div>
+				<label><input type="checkbox" name="terms" value="terms" required="required">I accept the terms and conditions</label>
 			</div>
+			<div class="form_field">
 				<input type="submit" value="Register" id="submit_button"/> 
 			</div>
 			<p>  
@@ -82,6 +83,6 @@
 				<a href="login.html">Go and login</a>
 			</p>
 		</form>
-	</register-form>
+	</div>
 </body>
 </html>
