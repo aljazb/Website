@@ -1,0 +1,35 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div id="discussion" class="full_menu">
+        <div class="menu_title_divided">
+            <h2 id="discussion_h">Discussion</h2>
+            <b><a href="" class="discussion_link">+ Reply</a></b>
+        </div>
+        <div>
+            <div class="topic_info_forum">
+                <h3 class="topic_head_forum">{{ topic.body }}</h3>
+                <time class="topic_date_forum">{{ topic.date }}</time>
+                <div class="like_section">
+                    <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    <p class="like_count">{{ topic.hearts }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    {% for comment in comments %}
+        <div class="answer">
+            <div class="topic_info_forum">
+                <h3 class="topic_answer_forum">{{ comment.body }}</h3>
+                <time class="topic_date_forum">{{ comment.date }}</time>
+                <div class="like_section">
+                    <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    <p class="like_count">{{ comment.hearts }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

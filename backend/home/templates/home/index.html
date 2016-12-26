@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'scripts/stars.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="popular_phones" class="side_menu">
+        <h2 class="menu_title">Popular Phones</h2>
+        <ul>
+            {% for phone in popular_phones %}
+                <li>
+                    <img src="{% static '' %}images/{{ phone.image }}" alt="Phone" class="device_icon">
+                    <div class="device_info">
+                        <b><a href="{% url 'detail' phone.id %}" class="device_name_link">{{ phone.name }}</a></b>
+                        <p class="short_description">{{ phone.description }}</p>
+                        <div class="stars_group">
+                            {{ phone.rating }}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="popular_tablets" class="side_menu">
+        <h2 class="menu_title">Popular Tablets</h2>
+        <ul>
+            {% for tablet in popular_tablets %}
+                <li>
+                    <img src="{% static '' %}images/{{ tablet.image }}" alt="Tablet" class="device_icon">
+                    <div class="device_info">
+                        <b><a href="{% url 'detail' tablet.id %}" class="device_name_link">{{ tablet.name }}</a></b>
+                        <p class="short_description">{{ tablet.description }}</p>
+                        <div class="stars_group">
+                            {{ tablet.rating }}
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="discussion" class="full_menu">
+        <div class="menu_title_divided">
+            <h2 id="discussion_h">Discussion</h2>
+            <b><a href="" class="discussion_link">+ New topic</a></b>
+        </div>
+        <ul>
+            {% for topic in topics %}
+                <li>
+                    <div class="topic_info">
+                        <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
+                        <time class="topic_date">{{ topic.date }}</time>
+                        <div class="like_section">
+                            <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                            <p class="like_count">{{ topic.hearts }}</p>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

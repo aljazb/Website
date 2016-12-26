@@ -1,4 +1,4 @@
-{% extends 'devices/base.html' %}
+{% extends 'home/base.html' %}
 {% load staticfiles %}
 
 {% block head %}
@@ -8,7 +8,7 @@
 
 {% block body %}
     <div class="full_menu_big" id="top_rated">
-        <h1 class="menu_title">Top rated</h1>
+        <h1 class="menu_title">{{ category }}</h1>
         {% if devices_list %}
             <ol>
             {% for device in devices_list %}
@@ -48,8 +48,8 @@
                          {% for topic in device.topic_set.all %}
                             <li>
                                 <div class="topic_info">
-                                    <b><a href="forum.html" class="topic_head">{{ topic.body }}</a></b>
-                                    <time datetime="2016-01-01 10:00">{{ topic.date }}</time>
+                                    <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
+                                    <time class="side_date">{{ topic.date }}</time>
                                     <div class="like_section">
                                         <img src="{% static '/images/heart.png' %}" alt="Heart" class="heart_icon">
                                         <p class="like_count">{{ topic.hearts }}</p>

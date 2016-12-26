@@ -20,6 +20,13 @@ class Brand(models.Model):
 
 
 class Device(models.Model):
+    PHONE = 'PH'
+    TABLET = 'TB'
+    DEVICE_TYPE = (
+        (PHONE, 'Phone'),
+        (TABLET, 'Tablet'),
+    )
+
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
@@ -38,6 +45,8 @@ class Device(models.Model):
     memory = models.CharField(max_length=100)
     camera = models.CharField(max_length=100)
     battery = models.CharField(max_length=100)
+    views = models.IntegerField(default=0)
+    type = models.CharField(max_length=2, choices=DEVICE_TYPE, default=PHONE)
 
     def __str__(self):
         return self.name

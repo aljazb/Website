@@ -15,8 +15,6 @@ function main() {
     var stepX = (maxX - centX) / 5.0;
     var stepY = (maxY - centY) / 5.0;
     
-    console.log(maxY-centY);
-    console.log(centY-minY);
     var graphCanvas = document.getElementById("graph_canvas");
     var ctx = graphCanvas.getContext("2d");
     ctx.strokeStyle = '#373D3F';

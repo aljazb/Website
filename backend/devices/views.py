@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.views import generic
 from .models import Device, Os, Brand
 
 
@@ -20,35 +19,43 @@ def brands(request):
 
 
 def device(request, device_id):
-    context = {"device": Device.objects.get(id=device_id)}
+    selected_device = Device.objects.get(id=device_id)
+    selected_device.views += 1
+    selected_device.save()
+    context = {"device": selected_device}
+
     return render(request, 'devices/details.html', context)
 
 
 def brand(request, brand_id):
     selected_brand = Brand.objects.get(id=brand_id)
-    context = {"devices_list": selected_brand.device_set.all()}
+    context = {
+        "devices_list": selected_brand.device_set.all(),
+        "category": selected_brand.name,
+    }
     return render(request, 'devices/devices.html', context)
 
 
-class TopRatedView(generic.ListView):
-    template_name = 'devices/devices.html'
-    context_object_name = 'devices_list'
-
-    def get_queryset(self):
-        return Device.objects.order_by('-rating')
-
-
-class JustReleasedView(generic.ListView):
-    template_name = 'devices/devices.html'
-    context_object_name = 'devices_list'
-
-    def get_queryset(self):
-        return Device.objects.order_by('-date')
+def top_rated(request):
+    context = {
+        "devices_list": Device.objects.order_by('-rating'),
+        "category": "Top Rated",
+    }
+    return render(request, 'devices/devices.html', context)
 
 
-class BudgetView(generic.ListView):
-    template_name = 'devices/devices.html'
-    context_object_name = 'devices_list'
+def just_released(request):
+    context = {
+        "devices_list": Device.objects.order_by('-date'),
+        "category": "Just Released",
+    }
+    return render(request, 'devices/devices.html', context)
 
-    def get_queryset(self):
-        return Device.objects.order_by('-price_rating')
+
+def budget(request):
+    context = {
+        "devices_list": Device.objects.order_by('-price_rating'),
+        "category": "Budget",
+    }
+    return render(request, 'devices/devices.html', context)
+

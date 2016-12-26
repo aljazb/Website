@@ -4,6 +4,12 @@ body {
     background-color: #EEEEEE;
 }
 
+#title {
+    display: inline;
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+}
+
 * {
     font-family: Helvetica;
     color: #373D3F;
@@ -23,6 +29,8 @@ input[type=submit]:hover {
 
 time {
     font-size: 12px;
+    display: inline-block;
+    width: 90%;
 }
 
 #top_bar {
@@ -35,10 +43,6 @@ time {
     height: 50px;
     padding-top: 15px;
     padding-right: 5px;
-}
-
-#title {
-    display: inline;
 }
 
 #login {
@@ -114,14 +118,6 @@ time {
 
 .answer img {
     margin-top: 10px;
-}
-
-.answer h3 {
-    width: 90%;
-}
-
-.answer time {
-    margin-left: 11%;
 }
 
 #discussion li {
@@ -217,11 +213,13 @@ time {
 }
 
 .topic_info {
+    margin-left: 15px;
     height: 40px;
     width: 100%;
 }
 
 .topic_info_forum {
+    margin-left: 15px;
     height: auto;
     width: 100%;
     margin-top: 10px;
@@ -229,7 +227,8 @@ time {
 
 .topic_date_forum {
     float: left;
-    margin-left: 7%;
+    margin-bottom: 10px;
+    margin-top: 3px;
 }
 
 .user_icon_forum {
@@ -240,10 +239,13 @@ time {
     margin-right: 10px;
 }
 
+.side_date {
+    display: inline;
+}
+
 .topic_head_forum {
     color: #6699CC;
     margin-bottom: 4px;
-    width: 90%;
     display: inline-block;
     font-size: 20px;
     float: left;
@@ -252,7 +254,6 @@ time {
 
 .topic_answer_forum {
     margin-bottom: 4px;
-    width: 90%;
     display: inline-block;
     font-size: 18px;
     float: left;
@@ -266,13 +267,13 @@ time {
 .topic_head {
     color: #6699CC;
     margin-bottom: 4px;
-    width: 90%;
     text-decoration: none;
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: inline-block;
     font-size: 20px;
+    width: 98%;
 }
 
 .heart_icon {

@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class Topic(models.Model):
-    device = models.ForeignKey(Device, on_delete=models.SET_NULL, null=True)
+    device = models.ForeignKey(Device, on_delete=models.SET_NULL, blank=True, null=True, default=None)
     body = models.CharField(max_length=1000)
     date = models.DateTimeField(default=datetime.now)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
