@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GadgetFreak</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <div id="top_bar">
+        <img id="logo" alt="Logo" src="{% static '/images/logo.png' %}">
+        <h1 id="title">GadgetFreak</h1>
+        <ul id="login">
+            <li><b><a href="login.html" class="login_element">Login</a></b></li>
+            <li><b><a href="register.html" class="login_element">Register</a></b></li>
+        </ul>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="index.html" class="menu_link">Home</a></li>
+            <li><a href="/devices/brands" class="menu_link">Brands</a></li>
+            <li><a href="/devices/top-rated" class="menu_link">Top Rated</a></li>
+            <li><a href="/devices/just-released" class="menu_link">Just Released</a></li>
+            <li><a href="/devices/budget" class="menu_link">Budget</a></li>
+        </ul>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,665 @@
+body {
+    width: 960px;
+    margin: auto;
+    background-color: #EEEEEE;
+}
+
+* {
+    font-family: Helvetica;
+    color: #373D3F;
+}
+
+p {
+    font-size: 14px;
+}
+
+a:hover {
+    color: #CC6600;
+}
+
+input[type=submit]:hover {
+    color: #CC6600;
+}
+
+time {
+    font-size: 12px;
+}
+
+#top_bar {
+    height: 70px;
+    width: 100%;
+}
+
+#logo {
+    width: 47px;
+    height: 50px;
+    padding-top: 15px;
+    padding-right: 5px;
+}
+
+#title {
+    display: inline;
+}
+
+#login {
+    display: inline;
+    height: 100%;
+    width: 90px;
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+#login li {
+    margin-top: 5px;
+}
+
+.login_element {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#menu {
+    border-radius: 25px;
+    height: auto;
+    background-color: #6699CC;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#menu ul {
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#menu li {
+    display: inline;
+    padding: 3%;
+    font-size: 18px;
+}
+
+#menu a {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu_link {
+    text-decoration: none;
+    color: white;
+}
+
+.side_menu {
+    border-radius: 25px;
+    width: 49%;
+    height: 480px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.menu_title {
+    width: 100%;
+    margin: 15px;
+}
+
+.menu_title_divided {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.answer img {
+    margin-top: 10px;
+}
+
+.answer h3 {
+    width: 90%;
+}
+
+.answer time {
+    margin-left: 11%;
+}
+
+#discussion li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.discussion_link {
+    float: right;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #6699CC;
+}
+
+.full_menu {
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+    height: auto;
+}
+
+#popular_phones, #ios_devices{
+    float: left;
+}
+
+#popular_tablets, #windows_phone_devices {
+    float: right;
+}
+
+.side_menu ul, .full_menu ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.side_menu li {
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 70px;
+}
+
+
+.device_icon {
+    width: auto;
+    height: 100%;
+    vertical-align: text-top;
+    float: left;
+}
+
+.device_info {
+    float: right;
+    display: inline;
+    width: 82%;
+    height: 100%;
+}
+
+.device_name_link {
+    padding-top: 5px;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #6699CC;
+}
+
+.device_name {
+    display: block;
+    font-size: 20px;
+    color: #6699CC;
+}
+
+.short_description {
+    margin-bottom: 4px;
+    margin-top: 4px;
+    width: 93%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.star_icon {
+    height: 20px;
+    width: auto;
+}
+
+.user_icon {
+    display: inline;
+    float: left;
+    width: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.topic_info {
+    height: 40px;
+    width: 100%;
+}
+
+.topic_info_forum {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.topic_date_forum {
+    float: left;
+    margin-left: 7%;
+}
+
+.user_icon_forum {
+    display: inline-block;
+    float: left;
+    width: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.topic_head_forum {
+    color: #6699CC;
+    margin-bottom: 4px;
+    width: 90%;
+    display: inline-block;
+    font-size: 20px;
+    float: left;
+    margin-top: 0;
+}
+
+.topic_answer_forum {
+    margin-bottom: 4px;
+    width: 90%;
+    display: inline-block;
+    font-size: 18px;
+    float: left;
+    margin-top: 0;
+}
+
+.menu_title_forum {
+    margin-top: 15px;
+}
+
+.topic_head {
+    color: #6699CC;
+    margin-bottom: 4px;
+    width: 90%;
+    text-decoration: none;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.heart_icon {
+    height: 15px;
+    width: auto;
+}
+
+.like_section {
+    float: right;
+    width: 75px;
+}
+
+.like_count {
+    display: inline;
+}
+
+.left_list {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.device_list {
+    width: 50%;
+    height: 100%;
+}
+
+.device_list li {
+    padding: 10px;
+}
+
+.left_device_list {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.right_device_list {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+.right_device_list li, .left_device_list li {
+    padding: 10px;
+}
+
+.full_menu_devices {
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.side_menu_devices {
+    border-radius: 25px;
+    width: 49%;
+    height: auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.side_menu_devices ul, .full_menu_devices ul {
+    padding: 0;
+    margin: 0;
+}
+
+.side_menu_devices li, .full_menu_devices li {
+    margin-left: 30px;
+    height: 20px;
+}
+
+.brand_link {
+    color: #6699CC;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.answer {
+    margin-left: 5%;
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 10px;
+    width: 95%;
+    background-color: white;
+    height: auto;
+}
+
+.device_icon_big {
+    width: auto;
+    height: 100%;
+    vertical-align: text-top;
+    float: left;
+    margin-right: 20px;
+}
+
+.full_menu_big {
+    border-radius: 25px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: white;
+}
+
+.full_menu_big ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.full_menu_big_li {
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.full_menu_big li {
+    height: 150px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.device_icon_big {
+    width: auto;
+    height: 100%;
+    vertical-align: text-top;
+    float: left;
+}
+
+.device_info_big {
+    float: left;
+    display: inline;
+    width: 25%;
+    height: 100%;
+}
+
+.discussion_right {
+    float: left;
+    display: inline;
+    width: 55%;
+    height: 100%;
+}
+
+.discussion_right ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.rating_text {
+    display: inline-block;  
+    width: 100px;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.stars_group {
+    display: inline; 
+    width: 50%;
+}
+
+.discussion_right li {
+    height: 25px;
+}
+
+.form {
+    margin: 20px;
+}
+
+.form_field input, select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit], #snap_photo {
+    width: 100%;
+    background-color: #6699CC;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.device_info_full {
+    float: left;
+    display: inline;
+    width: 30%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.device_icon_full {
+    width: auto;
+    height: 210px;
+    vertical-align: text-top;
+    float: left;
+    margin: 10px;
+    
+}
+
+#graph_canvas {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    height: 210px;
+    width: 300px;
+}
+
+#discussion_h {
+    float: left;
+    margin: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+    width: 100%;
+    margin-bottom: 30px;
+    background: black;
+}
+
+th, td {
+    padding: 5px;
+    padding-left: 30px;
+    height: 30px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+tr:first-child {
+    background-color: #EEEEEE;
+}
+
+tr:last-child {
+    background-color: #EEEEEE;
+}
+
+th {
+    background-color: #6699CC;
+    color: white;
+}
+
+#first_row th:first-child {
+    border-radius: 25px 0 0 0;
+}
+
+#first_row th:last-child {
+    border-radius: 0 25px 0 0;
+}
+
+#camera_canvas {
+    width: 35%;
+    height: auto;
+    margin-left: 5%;
+}
+
+#camera_section {
+    width: 100%;
+    height: auto;
+}
+
+#left_camera_section {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+}
+
+#viewfinder {
+    width: 100%;
+    height: auto;
+    display: inline;
+}
+
+#password_match {
+    color: #CC6600;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#snap_photo {
+    display: block;
+    width: 85%;
+}
+
+#last_row td:last-child {
+    border-radius: 0 0 25px 0;
+    background-color: white;
+}
+
+#last_row td:first-child {
+    border-radius: 0 0 0 25px;
+    background-color: white;
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        width: 90%;
+    }
+    
+    .side_menu, .left_device_list, .right_device_list, .side_menu_devices {
+        width: 100%;
+        float: left;
+    }
+    
+    .discussion_right {
+        display: none;
+    }
+    
+    .device_info_big {
+        width: 70%;
+    }
+    
+    .device_info_full {
+        width: 40%;
+    }
+    
+    #graph_canvas {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu_link {
+        display: block;
+    }
+    
+    .device_icon_big {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    
+    .device_info_full {
+        width: 70%;
+    }
+    
+    #left_camera_section {
+        width: 70%;
+        height: auto;
+    }
+    
+    #camera_canvas {
+        width: 70%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .device_icon, .user_icon {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    
+    .device_info {
+        width: 100%;
+    }
+    
+    .menu_title_divided a {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    #title {
+        font-size: 17px;
+    }
+    
+    .star_icon {
+        height: 13px;
+        width: auto;
+    }
+}

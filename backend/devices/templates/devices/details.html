@@ -1,0 +1,101 @@
+{% extends 'devices/base.html' %}
+
+{% block head %}
+    {% load staticfiles %}
+    <script type="text/javascript" src="{% static 'scripts/stars.js' %}"></script>
+    <script type="text/javascript" src="{% static 'scripts/graph.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div id="overview_area" class="full_menu">
+        <img src="{% static '' %}images/{{ device.image }}" alt="Device" class="device_icon_full">
+        <div class="device_info_full">
+            <h2 class="device_name">{{ device.brand.name }} {{ device.name }}</h2>
+            <p class="short_description">{{ device.description }}</p>
+            <div class="performance_rating">
+                <p class="rating_text"><b>Performance</b></p>
+                <div class="stars_group" id="performance_stars">
+                    {{ device.performance_rating }}
+                </div>
+            </div>
+            <div class="build_quality_rating">
+                <p class="rating_text"><b>Build quality</b></p>
+                <div class="stars_group" id="build_stars">
+                    {{ device.build_rating }}
+                </div>
+            </div>
+            <div class="camera_rating">
+                <p class="rating_text"><b>Camera</b></p>
+                <div class="stars_group" id="camera_stars">
+                    {{ device.camera_rating }}
+                </div>
+            </div>
+            <div class="price_rating">
+                <p class="rating_text"><b>Price</b></p>
+                <div class="stars_group" id="price_stars">
+                    {{ device.price_rating }}
+                </div>
+            </div>
+        </div>
+        <canvas id="graph_canvas"></canvas>
+    </div>
+    <table>
+        <tr id="first_row">
+            <th>Specifications</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Dimensions</td>
+            <td>{{ device.dimensions }}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>{{ device.weight }}</td>
+        </tr>
+        <tr>
+            <td>Display</td>
+            <td>{{ device.display }}</td>
+        </tr>
+        <tr>
+            <td>OS</td>
+            <td>{{ device.os }}</td>
+        </tr>
+        <tr>
+            <td>Chipset</td>
+            <td>{{ device.chipset }}</td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>{{ device.memory }}</td>
+        </tr>
+        <tr>
+            <td>Camera</td>
+            <td>{{ device.camera }}</td>
+        </tr>
+        <tr id="last_row">
+            <td>Battery</td>
+            <td>{{ device.battery }}</td>
+        </tr>
+    </table>
+    <div id="discussion" class="full_menu">
+        <div class="menu_title_divided">
+            <h2 id="discussion_h">Discussion</h2>
+            <b><a href="#" class="discussion_link">+ New topic</a></b>
+        </div>
+        <ul>
+            {% for topic in device.topic_set.all %}
+                <li>
+                    <img src="images/profile_picture_1.png" alt="User icon" class="user_icon">
+                    <div class="topic_info">
+                        <b><a href="forum.html" class="topic_head">{{ topic.body }}</a></b>
+                        <time class="topic_date" datetime="2016-01-01 10:00">{{ topic.date }}</time>
+                        <div class="like_section">
+                            <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                            <p class="like_count">{{ topic.hearts }}</p>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

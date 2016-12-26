@@ -1,8 +1,22 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from brands.models import Brand
 from datetime import datetime
+
+
+class Os(models.Model):
+    name = models.CharField(max_length=50);
+
+    def __str__(self):
+        return self.name
+
+
+class Brand(models.Model):
+    os = models.ForeignKey(Os, on_delete=models.SET_NULL, null=True)
+    name = models.CharField(max_length=100);
+
+    def __str__(self):
+        return self.name
 
 
 class Device(models.Model):
@@ -11,6 +25,7 @@ class Device(models.Model):
     description = models.CharField(max_length=500)
     image = models.CharField(max_length=500)
     date = models.DateTimeField(default=datetime.now)
+    rating = models.IntegerField()
     performance_rating = models.IntegerField()
     build_rating = models.IntegerField()
     camera_rating = models.IntegerField()
@@ -24,3 +39,5 @@ class Device(models.Model):
     camera = models.CharField(max_length=100)
     battery = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name

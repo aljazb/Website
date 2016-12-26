@@ -1,0 +1,50 @@
+{% extends 'devices/base.html' %}
+
+{% block body %}
+    <div id="android_devices" class="full_menu_devices">
+        <h2 class="menu_title">Android</h2>
+        <div class="left_device_list">
+            <ul>
+                {% for brand in android_list_left %}
+                    <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="right_device_list">
+            <ul class="device_list">
+                {% for brand in android_list_right %}
+                    <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div id="ios_devices" class="side_menu_devices">
+        <h2 class="menu_title">iOS</h2>
+        <ul class="device_list">
+            {% for brand in ios_list %}
+                <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="windows_phone_devices" class="side_menu_devices">
+        <h2 class="menu_title">Windows Phone</h2>
+        <ul class="device_list">
+            {% for brand in windows_list %}
+                <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="other_devices" class="full_menu_devices">
+        <h2 class="menu_title">Other</h2>
+        <ul class="left_device_list">
+            {% for brand in other_list_left %}
+                <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+            {% endfor %}
+        </ul>
+        <ul class="right_device_list">
+            {% for brand in other_list_right %}
+                <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

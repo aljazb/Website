@@ -13,6 +13,9 @@ class Topic(models.Model):
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     hearts = models.IntegerField()
 
+    def __str__(self):
+        return self.body
+
 
 class Comment(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
@@ -20,3 +23,6 @@ class Comment(models.Model):
     date = models.DateTimeField(default=datetime.now)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     hearts = models.IntegerField()
+
+    def __str__(self):
+        return self.body
