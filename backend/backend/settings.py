@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'devices.apps.DevicesConfig',
     'forum.apps.ForumConfig',
     'home.apps.HomeConfig',
+    'users_app.apps.UsersAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
