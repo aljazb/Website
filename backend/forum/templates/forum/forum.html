@@ -11,7 +11,7 @@
                 <h3 class="topic_head_forum">{{ topic.body }}</h3>
                 <time class="topic_date_forum">{{ topic.date }}</time>
                 <div class="like_section">
-                    <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    <a href="{% url 'topic_heart' topic.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
                     <p class="like_count">{{ topic.hearts }}</p>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 <h3 class="topic_answer_forum">{{ comment.body }}</h3>
                 <time class="topic_date_forum">{{ comment.date }}</time>
                 <div class="like_section">
-                    <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    <a href="{% url 'comment_heart' comment.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
                     <p class="like_count">{{ comment.hearts }}</p>
                 </div>
             </div>

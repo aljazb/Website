@@ -8,10 +8,11 @@
         </div>
         <div class="answer">
             {% if user.is_authenticated %}
-                <div class="topic_info_forum">
-                    <textarea class="topic_answer_textarea" placeholder="Write the text here..."></textarea>
-                    <b><a href="#" id="post_link">Post</a></b>
-                </div>
+                <form id="new_topic_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
+                    {% csrf_token %}
+                    <textarea class="topic_answer_textarea" id="new_topic_area" name="body" placeholder="Write the text here..."></textarea>
+                    <b><Button type="submit">Post</Button></b>
+                </form>
             {% else %}
                 <p id="login_comment">
                     You have to login to write comments:
