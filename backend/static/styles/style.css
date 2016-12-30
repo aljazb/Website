@@ -33,6 +33,14 @@ time {
     width: 90%;
 }
 
+#login_comment {
+    padding-left: 15px;
+}
+
+#login_comment_link {
+    padding-left: 5px;
+}
+
 #top_bar {
     height: 70px;
     width: 100%;
@@ -131,6 +139,17 @@ time {
     text-decoration: none;
     font-size: 22px;
     color: #6699CC;
+}
+
+#post_link {
+    float: right;
+    padding-top: 5px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #6699CC;
+    display: block;
 }
 
 .full_menu {
@@ -260,6 +279,15 @@ time {
     margin-top: 0;
 }
 
+.topic_answer_textarea {
+    margin-bottom: 4px;
+    display: inline-block;
+    width: 95%;
+    margin-left: 0.5%;
+    float: left;
+    margin-top: 0;
+}
+
 .menu_title_forum {
     margin-top: 15px;
 }
@@ -284,6 +312,12 @@ time {
 .like_section {
     float: right;
     width: 75px;
+}
+
+.post_section {
+    float: right;
+    width: 70px;
+    height: 30px;
 }
 
 .like_count {

@@ -14,8 +14,12 @@
         <img id="logo" alt="Logo" src="{% static '/images/logo.png' %}">
         <h1 id="title">GadgetFreak</h1>
         <ul id="login">
-            <li><b><a href="/user/login" class="login_element">Login</a></b></li>
-            <li><b><a href="/user/register" class="login_element">Register</a></b></li>
+            {% if user.is_authenticated %}
+                <li><b><a href="/user/logout" class="login_element">Logout</a></b></li>
+            {% else %}
+                <li><b><a href="/user/login" class="login_element">Login</a></b></li>
+                <li><b><a href="/user/register" class="login_element">Register</a></b></li>
+            {% endif %}
         </ul>
     </div>
     <div id="menu">

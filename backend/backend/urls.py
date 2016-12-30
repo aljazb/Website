@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^devices/', include('devices.urls')),
     url(r'^forum/', include('forum.urls')),
     url(r'^user/', include('users_app.urls')),
-    url(r'^home$', views.home, name='home'),
-    url(r'^$', views.home),
+    url(r'^home/', include('home.urls')),
+    url(r'^$', include('home.urls')),
 ]

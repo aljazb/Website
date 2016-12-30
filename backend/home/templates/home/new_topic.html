@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div id="new_topic" class="full_menu">
+        <div class="menu_title_divided">
+            <h2 id="discussion_h">New Topic</h2>
+        </div>
+        <div class="answer">
+            {% if user.is_authenticated %}
+                <div class="topic_info_forum">
+                    <textarea class="topic_answer_textarea" placeholder="Write the text here..."></textarea>
+                    <b><a href="#" id="post_link">Post</a></b>
+                </div>
+            {% else %}
+                <p id="login_comment">
+                    You have to login to write comments:
+                    <a id="login_comment_link" href="/user/login">Go and login</a>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

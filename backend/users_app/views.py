@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from forms import RegisterForm, LoginForm
 
@@ -50,3 +50,7 @@ class LoginFormView(View):
         form = self.form_class(None)
         return render(request, self.template_name, {'form': form})
 
+
+def logout_user(request):
+    logout(request)
+    return redirect('/home')

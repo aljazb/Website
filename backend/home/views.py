@@ -4,7 +4,7 @@ from devices.models import Device
 
 
 def home(request):
-    topics = Topic.objects.filter(device=None)
+    topics = Topic.objects.filter(device=None).order_by('-date')[:5]
     popular_phones = Device.objects.filter(type=Device.PHONE).order_by('-views')[:5]
     popular_tablets = Device.objects.filter(type=Device.TABLET).order_by('-views')[:5]
     context = {
@@ -13,3 +13,8 @@ def home(request):
         "popular_tablets": popular_tablets,
     }
     return render(request, 'home/index.html', context)
+
+
+def new_topic(request):
+    context = {}
+    return render(request, 'home/new_topic.html', context)
