@@ -11,8 +11,15 @@
                 <h3 class="topic_head_forum">{{ topic.body }}</h3>
                 <time class="topic_date_forum">{{ topic.date }}</time>
                 <div class="like_section">
-                    <a href="{% url 'topic_heart' topic.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'topic_heart' topic.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
+                    {% else %}
+                        <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    {% endif %}
                     <p class="like_count">{{ topic.hearts }}</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'topic_delete' topic.id %}"><img src="{% static 'images/delete.png' %}" alt="Delete" class="delete_icon"></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -24,22 +31,30 @@
                 <h3 class="topic_answer_forum">{{ comment.body }}</h3>
                 <time class="topic_date_forum">{{ comment.date }}</time>
                 <div class="like_section">
-                    <a href="{% url 'comment_heart' comment.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'comment_heart' comment.id %}"><img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon"></a>
+                    {% else %}
+                        <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
+                    {% endif %}
                     <p class="like_count">{{ comment.hearts }}</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'comment_delete' comment.id %}"><img src="{% static 'images/delete.png' %}" alt="Delete" class="delete_icon"></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
     {% endfor %}
     <div class="answer">
         {% if user.is_authenticated %}
-            <div class="topic_info_forum">
-                <textarea class="topic_answer_textarea" placeholder="Write a comment..."></textarea>
-                <b><a href="#" id="post_link">Post</a></b>
-            </div>
+            <form id="reply_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
+                {% csrf_token %}
+                <textarea class="topic_answer_textarea" name="body" placeholder="Write a comment..."></textarea>
+                <Button type="submit">Post</Button>
+            </form>
         {% else %}
             <p id="login_comment">
 				You have to login to write comments:
-				<a id="login_comment_link" href="/user/login">Go and login</a>
+				<a id="login_comment_link" href="/user/login/redirect{{ request.path }}">Go and login</a>
 			</p>
         {% endif %}
     </div>

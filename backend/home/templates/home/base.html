@@ -15,9 +15,10 @@
         <h1 id="title">GadgetFreak</h1>
         <ul id="login">
             {% if user.is_authenticated %}
-                <li><b><a href="/user/logout" class="login_element">Logout</a></b></li>
+                <li><b><p id="login_name">{{ user.first_name }} {{ user.last_name }}</p></b></li>
+                <li><b><a href="/user/logout/redirect{{ request.path }}" class="login_element">Logout</a></b></li>
             {% else %}
-                <li><b><a href="/user/login" class="login_element">Login</a></b></li>
+                <li><b><a href="/user/login/redirect{{ request.path }}" class="login_element">Login</a></b></li>
                 <li><b><a href="/user/register" class="login_element">Register</a></b></li>
             {% endif %}
         </ul>

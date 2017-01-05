@@ -4,6 +4,7 @@
 {% block body %}
    <div id="register_menu" class="full_menu">
 		<h1 class="menu_title">Register</h1>
+        <p id="user_warning">{{ warning }}</p>
 		<form id="register_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
 			{% csrf_token %}
             {% include 'users_app/form_template.html' %}

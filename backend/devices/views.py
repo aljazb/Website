@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Device, Os, Brand
+
+DEFAULT_TOPIC_COUNT = 5
+EXPAND_COUNT = 5
 
 
 def brands(request):
@@ -18,13 +21,24 @@ def brands(request):
     return render(request, 'devices/brands.html', context)
 
 
-def device(request, device_id):
+def device(request, device_id, show_count=DEFAULT_TOPIC_COUNT):
+    if show_count is None:
+        show_count = DEFAULT_TOPIC_COUNT
     selected_device = Device.objects.get(id=device_id)
     selected_device.views += 1
     selected_device.save()
-    context = {"device": selected_device}
+    context = {
+        "device": selected_device,
+        "topic_list": selected_device.topic_set.all()[:show_count],
+    }
 
     return render(request, 'devices/details.html', context)
+
+
+def show_more(request, device_id, show_count=DEFAULT_TOPIC_COUNT):
+    if show_count is None:
+        show_count = DEFAULT_TOPIC_COUNT
+    return redirect('/devices/' + device_id + '/' + str(int(show_count)+EXPAND_COUNT))
 
 
 def brand(request, brand_id):
@@ -38,7 +52,7 @@ def brand(request, brand_id):
 
 def top_rated(request):
     context = {
-        "devices_list": Device.objects.order_by('-rating'),
+        "devices_list": Device.objects.order_by('-rating')[:10],
         "category": "Top Rated",
     }
     return render(request, 'devices/devices.html', context)
@@ -46,7 +60,7 @@ def top_rated(request):
 
 def just_released(request):
     context = {
-        "devices_list": Device.objects.order_by('-date'),
+        "devices_list": Device.objects.order_by('-date')[:10],
         "category": "Just Released",
     }
     return render(request, 'devices/devices.html', context)
@@ -54,7 +68,7 @@ def just_released(request):
 
 def budget(request):
     context = {
-        "devices_list": Device.objects.order_by('-price_rating'),
+        "devices_list": Device.objects.order_by('-price_rating')[:10],
         "category": "Budget",
     }
     return render(request, 'devices/devices.html', context)

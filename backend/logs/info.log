@@ -1,0 +1,114 @@
+DEBUG 2017-01-04 17:20:37,685 views 60257 123145522257920 New user registration: dsfsdfsdfdsfds
+DEBUG 2017-01-04 17:26:08,730 views 60366 123145513926656 [Comment deleted] user: aljazb comment: sdf
+fds
+
+DEBUG 2017-01-04 17:26:35,938 views 60383 123145494994944 [Topic deleted] user: aljazb; topic: lkasdhilfdsa
+WARNING 2017-01-05 07:19:14,465 base 63237 123145396867072 Not Found: /favicon.ico
+WARNING 2017-01-05 07:19:14,558 base 63237 123145396867072 Not Found: /favicon.ico
+WARNING 2017-01-05 07:19:31,996 base 63237 123145396867072 Not Found: /user/login/redirect/
+WARNING 2017-01-05 07:19:52,361 base 63237 123145396867072 Not Found: /user/login/redirect/
+WARNING 2017-01-05 07:19:56,938 base 63237 123145413693440 Not Found: /user/login/redirect/
+WARNING 2017-01-05 07:20:08,297 base 63237 123145396867072 Not Found: /user/login/
+WARNING 2017-01-05 07:59:14,827 base 63237 123145401073664 Not Found: /user/logout/redirect/
+WARNING 2017-01-05 07:59:19,784 base 63237 123145401073664 Not Found: /user/logout/redirect/
+WARNING 2017-01-05 08:02:30,447 base 64553 123145313533952 Not Found: /user/login/redirect/
+WARNING 2017-01-05 08:04:36,406 base 64625 123145567428608 Not Found: /user/logout/redirect/
+ERROR 2017-01-05 13:32:41,519 exception 68672 123145323458560 Internal Server Error: /devices/top-rated
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/devices/views.py", line 58, in top_rated
+    return render(request, 'devices/devices.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 314, in render
+    if match:
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 264, in __nonzero__
+    return type(self).__bool__(self)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 260, in __bool__
+    self._fetch_all()
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 369, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 47, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 293, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 553, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/compiler.py", line 586, in _setup_joins
+    pieces, opts, alias)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1402, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1327, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+FieldError: Cannot resolve keyword 'rating_score_rounded' into field. Choices are: battery, brand, brand_id, build_rating, camera, camera_rating, chipset, date, description, dimensions, display, id, image, memory, name, os, performance_rating, price_rating, rating, topic, type, views, weight
+ERROR 2017-01-05 13:34:52,992 exception 68756 123145402560512 Internal Server Error: /devices/top-rated
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/devices/views.py", line 55, in top_rated
+    "devices_list": Device.objects.order_by('-rating_score_rounded()')[:10],
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 934, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1665, in add_ordering
+    raise FieldError('Invalid order_by arguments: %s' % errors)
+FieldError: Invalid order_by arguments: ['-rating_score_rounded()']
+ERROR 2017-01-05 13:35:08,830 exception 68766 123145404686336 Internal Server Error: /devices/top-rated
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/devices/views.py", line 55, in top_rated
+    "devices_list": Device.objects.order_by('-rating_score_rounded(self)')[:10],
+  File "/Library/Python/2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/db/models/query.py", line 934, in order_by
+    obj.query.add_ordering(*field_names)
+  File "/Library/Python/2.7/site-packages/django/db/models/sql/query.py", line 1665, in add_ordering
+    raise FieldError('Invalid order_by arguments: %s' % errors)
+FieldError: Invalid order_by arguments: ['-rating_score_rounded(self)']

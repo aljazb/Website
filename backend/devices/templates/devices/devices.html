@@ -13,57 +13,57 @@
             <ol>
             {% for device in devices_list %}
                 <li class="full_menu_big_li">
-                <img src="{% static '' %}images/{{ device.image }}" alt="Device" class="device_icon_big">
-                <div class="device_info_big">
-                    <b><a href="{% url 'detail' device.id %}" class="device_name_link">{{ device.name }}</a></b>
-                    <p class="short_description">{{ device.description }}</p>
-                    <div class="performance_rating">
-                        <p class="rating_text"><b>Performance</b></p>
-                        <div class="stars_group">
-                            {{ device.performance_rating }}
+                    <img src="{% static '' %}images/{{ device.image }}" alt="Device" class="device_icon_big">
+                    <div class="device_info_big">
+                        <b><a href="{% url 'detail' device.id %}" class="device_name_link">{{ device.brand.name }} {{ device.name }}</a></b>
+                        <p class="short_description">{{ device.description }}</p>
+                        <div class="performance_rating">
+                            <p class="rating_text"><b>Performance</b></p>
+                            <div class="stars_group">
+                                {{ device.performance_rating }}
+                            </div>
+                        </div>
+                        <div class="build_quality_rating">
+                            <p class="rating_text"><b>Build quality</b></p>
+                            <div class="stars_group">
+                                {{ device.build_rating }}
+                            </div>
+                        </div>
+                        <div class="camera_rating">
+                            <p class="rating_text"><b>Camera</b></p>
+                            <div class="stars_group">
+                                {{ device.camera_rating }}
+                            </div>
+                        </div>
+                        <div class="price_rating">
+                            <p class="rating_text"><b>Price</b></p>
+                            <div class="stars_group">
+                                {{ device.price_rating }}
+                            </div>
                         </div>
                     </div>
-                    <div class="build_quality_rating">
-                        <p class="rating_text"><b>Build quality</b></p>
-                        <div class="stars_group">
-                            {{ device.build_rating }}
-                        </div>
-                    </div>
-                    <div class="camera_rating">
-                        <p class="rating_text"><b>Camera</b></p>
-                        <div class="stars_group">
-                            {{ device.camera_rating }}
-                        </div>
-                    </div>
-                    <div class="price_rating">
-                        <p class="rating_text"><b>Price</b></p>
-                        <div class="stars_group">
-                            {{ device.price_rating }}
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="discussion_right">
-                     <ul>
-                         {% for topic in device.topic_set.all %}
-                            <li>
-                                <div class="topic_info">
-                                    <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
-                                    <time class="side_date">{{ topic.date }}</time>
-                                    <div class="like_section">
-                                        <img src="{% static '/images/heart.png' %}" alt="Heart" class="heart_icon">
-                                        <p class="like_count">{{ topic.hearts }}</p>
+
+                    <div class="discussion_right">
+                         <ul>
+                             {% for topic in device.topic_set.all %}
+                                <li>
+                                    <div class="topic_info">
+                                        <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
+                                        <time class="side_date">{{ topic.date }}</time>
+                                        <div class="like_section">
+                                            <img src="{% static '/images/heart.png' %}" alt="Heart" class="heart_icon">
+                                            <p class="like_count">{{ topic.hearts }}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                         {% endfor %}
-                    </ul>
-                </div>
-            </li>
+                                </li>
+                             {% endfor %}
+                        </ul>
+                    </div>
+                </li>
             {% endfor %}
-        </ol>
+            </ol>
         {% else %}
-            <h3>No devices</h3>
+            <h3 id="no_devices">No devices</h3>
         {% endif %}
     </div>
 {% endblock %}

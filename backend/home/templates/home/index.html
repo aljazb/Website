@@ -14,10 +14,10 @@
                 <li>
                     <img src="{% static '' %}images/{{ phone.image }}" alt="Phone" class="device_icon">
                     <div class="device_info">
-                        <b><a href="{% url 'detail' phone.id %}" class="device_name_link">{{ phone.name }}</a></b>
+                        <b><a href="{% url 'detail' phone.id %}" class="device_name_link">{{ phone.brand.name }} {{ phone.name }}</a></b>
                         <p class="short_description">{{ phone.description }}</p>
                         <div class="stars_group">
-                            {{ phone.rating }}
+                            {{ phone.rating_score_rounded }}
                         </div>
                     </div>
                 </li>
@@ -31,10 +31,10 @@
                 <li>
                     <img src="{% static '' %}images/{{ tablet.image }}" alt="Tablet" class="device_icon">
                     <div class="device_info">
-                        <b><a href="{% url 'detail' tablet.id %}" class="device_name_link">{{ tablet.name }}</a></b>
+                        <b><a href="{% url 'detail' tablet.id %}" class="device_name_link">{{ tablet.brand.name }} {{ tablet.name }}</a></b>
                         <p class="short_description">{{ tablet.description }}</p>
                         <div class="stars_group">
-                            {{ tablet.rating }}
+                            {{ tablet.rating_score_rounded }}
                         </div>
                     </div>
                 </li>
@@ -44,7 +44,7 @@
     <div id="discussion" class="full_menu">
         <div class="menu_title_divided">
             <h2 id="discussion_h">Discussion</h2>
-            <b><a href="/home/new-topic" class="discussion_link">+ New topic</a></b>
+            <b><a href="{% url 'new_topic' %}" class="discussion_link">+ New topic</a></b>
         </div>
         <ul>
             {% for topic in topics %}
@@ -60,5 +60,6 @@
                 </li>
             {% endfor %}
         </ul>
+    <b><a href="{{ request.path }}show-more" id="show_more" class="topic_head">Show more</a></b>
     </div>
 {% endblock %}

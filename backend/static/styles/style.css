@@ -56,21 +56,29 @@ time {
 #login {
     display: inline;
     height: 100%;
-    width: 90px;
+    width: 200px;
     float: right;
     padding: 0;
     margin: 0;
     margin-top: 20px;
+    margin-right: 10px;
     list-style-type: none;
 }
 
 #login li {
     margin-top: 5px;
+    text-align: right;
 }
 
 .login_element {
     text-decoration: none;
     font-size: 20px;
+}
+
+#login_name {
+    font-size: 20px;
+    color: #6699CC;
+    margin: 0;
 }
 
 #menu {
@@ -269,6 +277,7 @@ time {
     font-size: 20px;
     float: left;
     margin-top: 0;
+    width: 97%;
 }
 
 .topic_answer_forum {
@@ -277,13 +286,12 @@ time {
     font-size: 18px;
     float: left;
     margin-top: 0;
+    width: 98%;
 }
 
 .topic_answer_textarea {
     margin-bottom: 4px;
     display: inline-block;
-    width: 95%;
-    margin-left: 0.5%;
     float: left;
     margin-top: 0;
 }
@@ -304,9 +312,22 @@ time {
     width: 98%;
 }
 
-.heart_icon {
+.heart_icon, .delete_icon {
     height: 15px;
     width: auto;
+}
+
+.delete_icon {
+    opacity: 0;
+}
+
+.delete_icon:hover {
+    opacity: 1;
+}
+
+#user_warning {
+    margin-left: 20px;
+    color: #CC6600;
 }
 
 .like_section {
@@ -453,9 +474,20 @@ time {
     height: 100%;
 }
 
+#no_devices {
+    margin-left: 25px;
+}
+
+#show_more {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .discussion_right ul {
     padding: 0;
     list-style-type: none;
+    height: 150px;
+    overflow: hidden;
 }
 
 .rating_text {
@@ -539,10 +571,9 @@ Button[type=submit], #snap_photo {
 
 table {
     border-collapse: collapse;
-    border-spacing: 0; 
+    border-spacing: 0;
     width: 100%;
     margin-bottom: 30px;
-    background: black;
 }
 
 th, td {

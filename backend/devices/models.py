@@ -50,3 +50,12 @@ class Device(models.Model):
 
     def __str__(self):
         return self.name
+
+    def is_running_android(self):
+        return self.brand.os.name == 'Android'
+
+    def rating_score(self):
+        return (self.rating * 3 + self.performance_rating + self.camera_rating + self.build_rating + self.price_rating)/7.
+
+    def rating_score_rounded(self):
+        return int(round(self.rating_score()))

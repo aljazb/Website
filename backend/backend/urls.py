@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^forum/', include('forum.urls')),
     url(r'^user/', include('users_app.urls')),
     url(r'^home/', include('home.urls')),
+    url(r'^', include('home.urls')),
     url(r'^$', include('home.urls')),
 ]
