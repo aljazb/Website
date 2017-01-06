@@ -15,9 +15,3 @@ Nekaj glavnih značilnosti:
  - Bogata skupnost prijaznih uporabnikov z koristnimi predlogi
  - Primerno tako za manj, kot bolj izkušene na področju mobilnih aparatov
  
-Opažene težave v nekaterih brskalnikih:
- - V zaobljenih robovih tabele v dokumentu device.html se namesto določene barve ozadja zariše črna barva 
-
-Veliko truda sem vložil v canvas, ki grafično prikazuje dobre in slabe strani izdelka na podlagi njegove ocene. Ponosen sem tudi na splošen dizajn strani, ki omogoča preglednost in prilagajanje vsebine na velikost zaslona ter s tem prikaže čim več informacij.
-
-Stran bi v prihodnje potrebovala veliko več vsebine, saj je njen vspeh odvisen od števila naprav, ocen in konstruktivnih komentarjev. Obvezen je seveda tudi zaledni sistem, ki bo skrbel za prikazovanje vsebine in pravilno urejanje naprav po oceni, popularnosti,...

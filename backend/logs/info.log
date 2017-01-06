@@ -19482,3 +19482,15 @@ Traceback (most recent call last):
 OperationalError: database is locked
 DEBUG 2017-01-06 14:01:45,626 views 71878 123145473462272 [Comment deleted] user: janezn; comment: SPAM; topic: Performance tests
 DEBUG 2017-01-06 14:01:47,118 views 71878 123145473462272 [Comment deleted] user: janezn; comment: SPAM; topic: Performance tests
+WARNING 2017-01-06 14:11:41,866 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-06 14:11:41,951 base 71878 123145473462272 Not Found: /apple-touch-icon.png
+WARNING 2017-01-06 14:11:41,966 base 71878 123145473462272 Not Found: /favicon.ico
+WARNING 2017-01-06 14:11:41,978 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-06 14:11:41,990 base 71878 123145473462272 Not Found: /apple-touch-icon.png
+WARNING 2017-01-06 14:11:42,007 base 71878 123145473462272 Not Found: /favicon.ico
+WARNING 2017-01-06 14:11:42,069 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-06 14:11:42,082 base 71878 123145473462272 Not Found: /apple-touch-icon.png
+WARNING 2017-01-06 14:11:42,095 base 71878 123145473462272 Not Found: /favicon.ico
+WARNING 2017-01-06 14:11:42,107 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-06 14:11:42,118 base 71878 123145473462272 Not Found: /apple-touch-icon.png
+WARNING 2017-01-06 14:11:42,135 base 71878 123145473462272 Not Found: /favicon.ico
