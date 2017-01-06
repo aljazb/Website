@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GadgetFreak</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+    
+    
+</head>
+<body>
+    <div id="top_bar">
+        <img id="logo" alt="Logo" src="/static/images/logo.png">
+        <h1 id="title">GadgetFreak</h1>
+        <ul id="login">
+            
+                <li><b><p id="login_name">Janez Novak</p></b></li>
+                <li><b><a href="/user/logout/redirect/forum/57" class="login_element">Logout</a></b></li>
+            
+        </ul>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="/home" class="menu_link">Home</a></li>
+            <li><a href="/devices/brands" class="menu_link">Brands</a></li>
+            <li><a href="/devices/top-rated" class="menu_link">Top Rated</a></li>
+            <li><a href="/devices/just-released" class="menu_link">Just Released</a></li>
+            <li><a href="/devices/budget" class="menu_link">Budget</a></li>
+        </ul>
+    </div>
+
+    
+    <div id="discussion" class="full_menu">
+        <div class="menu_title_divided">
+            <h2 id="discussion_h">Discussion</h2>
+        </div>
+        <div>
+            <div class="topic_info_forum">
+                <h3 class="topic_head_forum">Performance tests</h3>
+                <time class="topic_date_forum">Jan. 6, 2017, 1:08 p.m.</time>
+                <div class="like_section">
+                    
+                        <a href="/forum/57/heart"><img src="/static/images/heart.png" alt="Heart" class="heart_icon"></a>
+                    
+                    <p class="like_count">0</p>
+                    
+                        <a href="/forum/57/delete"><img src="/static/images/delete.png" alt="Delete" class="delete_icon"></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    
+    <div class="answer">
+        
+            <form id="reply_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
+                <input type='hidden' name='csrfmiddlewaretoken' value='Yfog9nIHI56GNi0YRbwbtrNWPEk5NIRs8MWHesAisUsb0UZxOZFE7ISj4OyIAgrH' />
+                <textarea class="topic_answer_textarea" name="body" placeholder="Write a comment..."></textarea>
+                <Button type="submit">Post</Button>
+            </form>
+        
+    </div>
+
+</body>
+</html>

@@ -87,7 +87,7 @@ def delete_topic(request, topic_id):
     deleted_topic = Topic.objects.get(id=topic_id)
     if request.user.has_perm('forum.delete_comment') or request.user == deleted_topic.author:
         current_device = deleted_topic.device
-        logger.debug('[Topic deleted] user: ' + request.user.username + '; topic: ' + deleted_topic.body + '; device: ' + current_device.name)
+        logger.debug('[Topic deleted] user: ' + request.user.username + '; topic: ' + deleted_topic.body)
         deleted_topic.delete()
         if current_device is None:
             return redirect('/home')

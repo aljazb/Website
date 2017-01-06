@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GadgetFreak</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css">
+    
+    
+</head>
+<body>
+    <div id="top_bar">
+        <img id="logo" alt="Logo" src="/static/images/logo.png">
+        <h1 id="title">GadgetFreak</h1>
+        <ul id="login">
+            
+                <li><b><a href="/user/login/redirect/user/login" class="login_element">Login</a></b></li>
+                <li><b><a href="/user/register" class="login_element">Register</a></b></li>
+            
+        </ul>
+    </div>
+    <div id="menu">
+        <ul>
+            <li><a href="/home" class="menu_link">Home</a></li>
+            <li><a href="/devices/brands" class="menu_link">Brands</a></li>
+            <li><a href="/devices/top-rated" class="menu_link">Top Rated</a></li>
+            <li><a href="/devices/just-released" class="menu_link">Just Released</a></li>
+            <li><a href="/devices/budget" class="menu_link">Budget</a></li>
+        </ul>
+    </div>
+
+    
+   <div id="login_menu" class="full_menu">
+    	<h1 class="menu_title">Login</h1>
+        <p id="user_warning"></p>
+    	<form id="login_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
+    		<input type='hidden' name='csrfmiddlewaretoken' value='lpG4OTr4tnTUozf2r6px9O5cKN30qCsmxI4pYezRDb3d3fPob1gDH336IvDp3Nza' />
+            
+    <div class="form_field">
+        <label><label for="id_username">Username:</label></label>
+        <div><input id="id_username" maxlength="150" name="username" type="text" required /></div>
+    </div>
+
+    <div class="form_field">
+        <label><label for="id_password">Password:</label></label>
+        <div><input id="id_password" name="password" type="password" required /></div>
+    </div>
+
+            <div class="form_field">
+                <Button type="submit" id="submit_button">Submit</Button>
+			</div>
+    		<p>  
+    			Don't have an account?
+    			<a href="/user/register">Go and register</a>
+    		</p>
+		</form>
+	</div>
+
+</body>
+</html>
