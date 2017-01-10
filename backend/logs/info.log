@@ -19494,3 +19494,516 @@ WARNING 2017-01-06 14:11:42,095 base 71878 123145473462272 Not Found: /favicon.i
 WARNING 2017-01-06 14:11:42,107 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
 WARNING 2017-01-06 14:11:42,118 base 71878 123145473462272 Not Found: /apple-touch-icon.png
 WARNING 2017-01-06 14:11:42,135 base 71878 123145473462272 Not Found: /favicon.ico
+WARNING 2017-01-06 14:17:29,915 base 71878 123145473462272 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-06 14:17:30,071 base 71878 123145473462272 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 10:19:50,158 base 47221 123145561362432 Not Found: /favicon.ico
+WARNING 2017-01-10 10:43:12,873 base 49330 123145313386496 Not Found: /
+WARNING 2017-01-10 10:43:14,810 base 49330 123145317593088 Not Found: /
+WARNING 2017-01-10 10:43:20,578 base 49330 123145321799680 Not Found: /
+WARNING 2017-01-10 10:43:25,489 base 49330 123145313386496 Not Found: /home
+WARNING 2017-01-10 10:44:00,570 base 49330 123145313386496 Not Found: /sl-si/home/
+ERROR 2017-01-10 12:52:47,388 exception 50106 123145393274880 Internal Server Error: /sl-si/home/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 11: 'blocktrans', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2017-01-10 13:24:13,982 exception 50490 123145504235520 Internal Server Error: /en-us/forum/1
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 22, in topic
+    return render(request, template_name, context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'blocktrans' doesn't allow other block tags (seen u'if user.is_authenticated') inside it
+ERROR 2017-01-10 13:49:08,584 exception 50743 123145352531968 Internal Server Error: /en-us/home/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: ''logout' from ''logout'
+ERROR 2017-01-10 13:49:53,543 exception 50743 123145352531968 Internal Server Error: /en-us/home/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: ''logout' from ''logout'
+ERROR 2017-01-10 13:50:56,560 exception 50743 123145352531968 Internal Server Error: /en-us/home/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: ''logout' from ''logout'
+ERROR 2017-01-10 13:51:17,981 exception 50743 123145352531968 Internal Server Error: /en-us/home/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 152, in render
+    compiled_parent = self.get_parent(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 149, in get_parent
+    return self.find_template(parent, context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 129, in find_template
+    template_name, skip=history,
+  File "/Library/Python/2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Library/Python/2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 31: 'endfor', expected 'endlanguage'. Did you forget to register or load this tag?
+ERROR 2017-01-10 14:22:12,364 exception 50743 123145352531968 Internal Server Error: /en-us/home/10
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'login_redirect' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: [u'en-us/user/login/redirect/(?P<redirect_link>[a-zA-Z0-9/-]+)$']
+ERROR 2017-01-10 14:22:14,620 exception 50743 123145352531968 Internal Server Error: /en-us/home/10
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'login_redirect' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: [u'en-us/user/login/redirect/(?P<redirect_link>[a-zA-Z0-9/-]+)$']
+ERROR 2017-01-10 14:22:20,077 exception 50743 123145356738560 Internal Server Error: /en-us/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'login_redirect' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: [u'en-us/user/login/redirect/(?P<redirect_link>[a-zA-Z0-9/-]+)$']
+ERROR 2017-01-10 14:22:20,857 exception 50743 123145365151744 Internal Server Error: /en-us/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'login_redirect' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: [u'en-us/user/login/redirect/(?P<redirect_link>[a-zA-Z0-9/-]+)$']
+ERROR 2017-01-10 14:25:48,564 exception 50743 123145352531968 Internal Server Error: /sl-si/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'forum' with arguments '(57,)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+ERROR 2017-01-10 14:25:50,486 exception 50743 123145352531968 Internal Server Error: /sl-si/
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 23, in home
+    return render(request, 'home/index.html', context)
+  File "/Library/Python/2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Python/2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Library/Python/2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Library/Python/2.7/site-packages/django/template/defaulttags.py", line 439, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Python/2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Library/Python/2.7/site-packages/django/urls/resolvers.py", line 392, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns)
+NoReverseMatch: Reverse for 'forum' with arguments '(57,)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+DEBUG 2017-01-10 14:43:52,320 views 51375 123145505107968 [Comment deleted] user: janezn; comment: komentarr; topic: Where can I buy Apple iPhone accessories?

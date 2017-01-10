@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,20 +18,29 @@
         <ul id="login">
             {% if user.is_authenticated %}
                 <li><b><p id="login_name">{{ user.first_name }} {{ user.last_name }}</p></b></li>
-                <li><b><a href="/user/logout/redirect{{ request.path }}" class="login_element">Logout</a></b></li>
+                <li><b><a href="/user/logout/redirect{{ request.path }}" class="login_element">{% blocktrans %}Logout{% endblocktrans %}</a></b></li>
             {% else %}
-                <li><b><a href="/user/login/redirect{{ request.path }}" class="login_element">Login</a></b></li>
-                <li><b><a href="/user/register" class="login_element">Register</a></b></li>
+                <li><b><a href="/user/login/redirect{{ request.path }}" class="login_element">{% blocktrans %}Login{% endblocktrans %}</a></b></li>
+                <li><b><a href="{% url 'register' %}" class="login_element">{% blocktrans %}Register{% endblocktrans %}</a></b></li>
             {% endif %}
+            <div id="language_list">
+            {% get_available_languages as languages %} 
+            {% for lang_code, lang_name in languages %} 
+                {% language lang_code %} 
+                <a href="{% url 'home' %}">{{ lang_name }}</a> 
+                {% endlanguage %}
+            {% endfor %}
+            </div>
         </ul>
+
     </div>
     <div id="menu">
         <ul>
-            <li><a href="/home" class="menu_link">Home</a></li>
-            <li><a href="/devices/brands" class="menu_link">Brands</a></li>
-            <li><a href="/devices/top-rated" class="menu_link">Top Rated</a></li>
-            <li><a href="/devices/just-released" class="menu_link">Just Released</a></li>
-            <li><a href="/devices/budget" class="menu_link">Budget</a></li>
+            <li><a href="{% url 'home' %}" class="menu_link">{% blocktrans %}Home{% endblocktrans %}</a></li>
+            <li><a href="{% url 'brands' %}" class="menu_link">{% blocktrans %}Brands{% endblocktrans %}</a></li>
+            <li><a href="{% url 'top-rated' %}" class="menu_link">{% blocktrans %}Top Rated{% endblocktrans %}</a></li>
+            <li><a href="{% url 'just-released' %}" class="menu_link">{% blocktrans %}Just Released{% endblocktrans %}</a></li>
+            <li><a href="{% url 'budget' %}" class="menu_link">{% blocktrans %}Budget{% endblocktrans %}</a></li>
         </ul>
     </div>
 

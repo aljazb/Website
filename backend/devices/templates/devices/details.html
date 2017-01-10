@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load i18n %}
 
 {% block head %}
     {% load staticfiles %}
@@ -13,25 +14,25 @@
             <h2 class="device_name">{{ device.brand.name }} {{ device.name }}</h2>
             <p class="short_description">{{ device.description }}</p>
             <div class="performance_rating">
-                <p class="rating_text"><b>Performance</b></p>
+                <p class="rating_text"><b>{% blocktrans %}Performance{% endblocktrans %}</b></p>
                 <div class="stars_group" id="performance_stars">
                     {{ device.performance_rating }}
                 </div>
             </div>
             <div class="build_quality_rating">
-                <p class="rating_text"><b>Build quality</b></p>
+                <p class="rating_text"><b>{% blocktrans %}Build quality{% endblocktrans %}</b></p>
                 <div class="stars_group" id="build_stars">
                     {{ device.build_rating }}
                 </div>
             </div>
             <div class="camera_rating">
-                <p class="rating_text"><b>Camera</b></p>
+                <p class="rating_text"><b>{% blocktrans %}Camera{% endblocktrans %}</b></p>
                 <div class="stars_group" id="camera_stars">
                     {{ device.camera_rating }}
                 </div>
             </div>
             <div class="price_rating">
-                <p class="rating_text"><b>Price</b></p>
+                <p class="rating_text"><b>{% blocktrans %}Price{% endblocktrans %}</b></p>
                 <div class="stars_group" id="price_stars">
                     {{ device.price_rating }}
                 </div>
@@ -41,52 +42,52 @@
     </div>
     <table>
         <tr id="first_row">
-            <th>Specifications</th>
+            <th>{% blocktrans %}Specifications{% endblocktrans %}</th>
             <th></th>
         </tr>
         <tr>
-            <td>Dimensions</td>
+            <td>{% blocktrans %}Dimensions{% endblocktrans %}</td>
             <td>{{ device.dimensions }}</td>
         </tr>
         <tr>
-            <td>Weight</td>
+            <td>{% blocktrans %}Weight{% endblocktrans %}</td>
             <td>{{ device.weight }}</td>
         </tr>
         <tr>
-            <td>Display</td>
+            <td>{% blocktrans %}Display{% endblocktrans %}</td>
             <td>{{ device.display }}</td>
         </tr>
         <tr>
-            <td>OS</td>
+            <td>{% blocktrans %}OS{% endblocktrans %}</td>
             <td>{{ device.os }}</td>
         </tr>
         <tr>
-            <td>Chipset</td>
+            <td>{% blocktrans %}Chipset{% endblocktrans %}</td>
             <td>{{ device.chipset }}</td>
         </tr>
         <tr>
-            <td>Memory</td>
+            <td>{% blocktrans %}Memory{% endblocktrans %}</td>
             <td>{{ device.memory }}</td>
         </tr>
         <tr>
-            <td>Camera</td>
+            <td>{% blocktrans %}Camera{% endblocktrans %}</td>
             <td>{{ device.camera }}</td>
         </tr>
         <tr id="last_row">
-            <td>Battery</td>
+            <td>{% blocktrans %}Battery{% endblocktrans %}</td>
             <td>{{ device.battery }}</td>
         </tr>
     </table>
     <div id="discussion" class="full_menu">
         <div class="menu_title_divided">
-            <h2 id="discussion_h">Discussion</h2>
-            <b><a href="new-topic/{{ device.id }}" class="discussion_link">+ New topic</a></b>
+            <h2 id="discussion_h">{% blocktrans %}Discussion{% endblocktrans %}</h2>
+            <b><a href="new-topic/{{ device.id }}" class="discussion_link">{% blocktrans %}+ New topic{% endblocktrans %}</a></b>
         </div>
         <ul>
             {% for topic in topic_list %}
                 <li>
                     <div class="topic_info">
-                        <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
+                        <b><a href="{% url 'topic' topic.id %}" class="topic_head">{{ topic.body }}</a></b>
                         <time class="topic_date">{{ topic.date }}</time>
                         <div class="like_section">
                             <img src="{% static 'images/heart.png' %}" alt="Heart" class="heart_icon">
@@ -96,6 +97,6 @@
                 </li>
             {% endfor %}
         </ul>
-    <b><a href="{{ request.path }}show-more" id="show_more" class="topic_head">Show more</a></b>
+    <b><a href="{{ request.path }}show-more" id="show_more" class="topic_head">{% blocktrans %}Show more{% endblocktrans %}</a></b>
     </div>
 {% endblock %}

@@ -1,22 +1,23 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block body %}
     <div id="new_topic" class="full_menu">
         <div class="menu_title_divided">
-            <h2 id="discussion_h">New Topic</h2>
+            <h2 id="discussion_h">{% blocktrans %}New Topic{% endblocktrans %}</h2>
         </div>
         <div class="answer">
             {% if user.is_authenticated %}
                 <form id="new_topic_form" class="form" action="" method="post" enctype="multipart/form-data" autocomplete="on">
                     {% csrf_token %}
-                    <textarea class="topic_answer_textarea" id="new_topic_area" name="body" placeholder="Write the text here..."></textarea>
-                    <Button type="submit">Post</Button>
+                    <textarea class="topic_answer_textarea" id="new_topic_area" name="body" placeholder="{% blocktrans %}Write the text here...{% endblocktrans %}"></textarea>
+                    <Button type="submit">{% blocktrans %}Post{% endblocktrans %}</Button>
                 </form>
             {% else %}
                 <p id="login_comment">
-                    You have to login to write comments:
-                    <a id="login_comment_link" href="/user/login/redirect{{ request.path }}">Go and login</a>
+                    {% blocktrans %}You have to login to write comments:{% endblocktrans %}
+                    <a id="login_comment_link" href="/user/login/redirect{{ request.path }}">{% blocktrans %}Go and login{% endblocktrans %}</a>
                 </p>
             {% endif %}
         </div>

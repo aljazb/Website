@@ -1,4 +1,5 @@
 {% extends 'home/base.html' %}
+{% load i18n %}
 
 {% block body %}
     <div id="android_devices" class="full_menu_devices">
@@ -35,7 +36,7 @@
         </ul>
     </div>
     <div id="other_devices" class="full_menu_devices">
-        <h2 class="menu_title">Other</h2>
+        <h2 class="menu_title">{% blocktrans %}Other{% endblocktrans %}</h2>
         <ul class="left_device_list">
             {% for brand in other_list_left %}
                 <li><b><a href="{% url 'brand' brand.id %}" class="brand_link">{{ brand.name }}</a></b></li>

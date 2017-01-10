@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Device, Os, Brand
+from django.utils.translation import gettext_lazy as _
 
 DEFAULT_TOPIC_COUNT = 5
 EXPAND_COUNT = 5
@@ -53,7 +54,7 @@ def brand(request, brand_id):
 def top_rated(request):
     context = {
         "devices_list": Device.objects.order_by('-rating')[:10],
-        "category": "Top Rated",
+        "category": _("Top Rated"),
     }
     return render(request, 'devices/devices.html', context)
 
@@ -61,7 +62,7 @@ def top_rated(request):
 def just_released(request):
     context = {
         "devices_list": Device.objects.order_by('-date')[:10],
-        "category": "Just Released",
+        "category": _("Just Released"),
     }
     return render(request, 'devices/devices.html', context)
 
@@ -69,7 +70,7 @@ def just_released(request):
 def budget(request):
     context = {
         "devices_list": Device.objects.order_by('-price_rating')[:10],
-        "category": "Budget",
+        "category": _("Budget"),
     }
     return render(request, 'devices/devices.html', context)
 

@@ -1,5 +1,6 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
+{% load i18n %}
 
 {% block head %}
     {% load staticfiles %}
@@ -18,25 +19,25 @@
                         <b><a href="{% url 'detail' device.id %}" class="device_name_link">{{ device.brand.name }} {{ device.name }}</a></b>
                         <p class="short_description">{{ device.description }}</p>
                         <div class="performance_rating">
-                            <p class="rating_text"><b>Performance</b></p>
+                            <p class="rating_text"><b>{% blocktrans %}Performance{% endblocktrans %}</b></p>
                             <div class="stars_group">
                                 {{ device.performance_rating }}
                             </div>
                         </div>
                         <div class="build_quality_rating">
-                            <p class="rating_text"><b>Build quality</b></p>
+                            <p class="rating_text"><b>{% blocktrans %}Build quality{% endblocktrans %}</b></p>
                             <div class="stars_group">
                                 {{ device.build_rating }}
                             </div>
                         </div>
                         <div class="camera_rating">
-                            <p class="rating_text"><b>Camera</b></p>
+                            <p class="rating_text"><b>{% blocktrans %}Camera{% endblocktrans %}</b></p>
                             <div class="stars_group">
                                 {{ device.camera_rating }}
                             </div>
                         </div>
                         <div class="price_rating">
-                            <p class="rating_text"><b>Price</b></p>
+                            <p class="rating_text"><b>{% blocktrans %}Price{% endblocktrans %}</b></p>
                             <div class="stars_group">
                                 {{ device.price_rating }}
                             </div>
@@ -48,7 +49,7 @@
                              {% for topic in device.topic_set.all %}
                                 <li>
                                     <div class="topic_info">
-                                        <b><a href="/forum/{{ topic.id }}" class="topic_head">{{ topic.body }}</a></b>
+                                        <b><a href="{% url 'topic' topic.id %}" class="topic_head">{{ topic.body }}</a></b>
                                         <time class="side_date">{{ topic.date }}</time>
                                         <div class="like_section">
                                             <img src="{% static '/images/heart.png' %}" alt="Heart" class="heart_icon">
@@ -63,7 +64,7 @@
             {% endfor %}
             </ol>
         {% else %}
-            <h3 id="no_devices">No devices</h3>
+            <h3 id="no_devices">{% blocktrans %}No devices{% endblocktrans %}</h3>
         {% endif %}
     </div>
 {% endblock %}
