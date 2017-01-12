@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Home app &#8212; GadgetFreak 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Users app" href="users-app.html" />
+    <link rel="prev" title="Forum app" href="forum-app.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="home-app">
+<h1>Home app<a class="headerlink" href="#home-app" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-home.views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-home.views" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="home.views.NewTopicFormView">
+<em class="property">class </em><code class="descclassname">home.views.</code><code class="descname">NewTopicFormView</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.NewTopicFormView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rendered page that is used for writing new topics</p>
+<p>The method checks whether the request is GET (the user requested a page used to write a new topic) and POST (the user posted a new topic)
+The POST method checks if the user is logged in and in that case saves the topic to the database and redirects to that page</p>
+<dl class="attribute">
+<dt id="home.views.NewTopicFormView.form_class">
+<code class="descname">form_class</code><a class="headerlink" href="#home.views.NewTopicFormView.form_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">TopicPostForm</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="home.views.NewTopicFormView.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.NewTopicFormView.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rendered page that is used for writing new topics</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="home.views.NewTopicFormView.post">
+<code class="descname">post</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.NewTopicFormView.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the user is logged in and in that case saves the topic to the database and redirects to that page</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="home.views.home">
+<code class="descclassname">home.views.</code><code class="descname">home</code><span class="sig-paren">(</span><em>request</em>, <em>show_count=5</em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the home page</p>
+<p>The method filters phones and tablets by a number of views they have and shows the top 5
+The topics get shown based on their publish date. By default 5 are displayed, but that can be expended by clicking show more</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object
+show_count &#8211; the number of topics that are currently displayed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="home.views.show_more">
+<code class="descclassname">home.views.</code><code class="descname">show_more</code><span class="sig-paren">(</span><em>request</em>, <em>show_count=5</em><span class="sig-paren">)</span><a class="headerlink" href="#home.views.show_more" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the url that specifies how many topics should be displayed and redirects to that page</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object
+show_count &#8211; the number of topics that are currently displayed</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Home app</a><ul>
+<li><a class="reference internal" href="#module-home.views">Views</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="forum-app.html" title="previous chapter">Forum app</a></li>
+      <li>Next: <a href="users-app.html" title="next chapter">Users app</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/home-app.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Aljaž.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/home-app.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

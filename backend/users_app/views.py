@@ -9,10 +9,16 @@ logger = logging.getLogger(__name__)
 
 
 class RegisterFormView(View):
+    """Class used for user registration"""
     form_class = RegisterForm
     template_name = 'users_app/register.html'
 
     def get(self, request):
+        """Returnes the user registration page
+
+        Keyword arguments:
+        request -- HttpRequest object
+        """
         form = self.form_class(None)
         context = {
             'form': form,
@@ -21,6 +27,13 @@ class RegisterFormView(View):
         return render(request, self.template_name, context)
 
     def post(self, request):
+        """Checks if the form is valid and if all of the inputs match the specified patterns
+
+        If any of them don't the error is shown. Otherwise the user information is saved to the database and redirects to the homepage happens
+
+        Keyword arguments:
+        request -- HttpRequest object
+        """
         form = self.form_class(request.POST)
 
         if form.is_valid():
@@ -83,6 +96,17 @@ class RegisterFormView(View):
 
 
 def login_form(request, redirect_link='home'):
+    """Used for user login
+
+    The method checks whether the request is GET (the user requested a page used to log in) and POST (the user
+    entered the username and password and submited it)
+    The POST method checks if the form is valid and if all of the inputs match the specified patterns
+    If any of them don't the error is shown. Otherwise the user is logged in and redirected to the page he was previously watching
+
+    Keyword arguments:
+    request -- HttpRequest object
+    redirect_link -- the link the user should be redirected to after the login
+    """
     form_class = LoginForm
     template_name = 'users_app/login.html'
     redirect_link = clean_redirect_link(redirect_link)
@@ -125,12 +149,21 @@ def login_form(request, redirect_link='home'):
 
 
 def logout_user(request, redirect_link='home'):
+    """Used for loging out a user
+
+    Keyword arguments:
+    request -- HttpRequest object
+    redirect_link -- the link the user should be redirected to after the logout"""
     logout(request)
     redirect_link = clean_redirect_link(redirect_link)
     return redirect('/' + redirect_link)
 
 
 def clean_redirect_link(link):
+    """Checks if the redirect link is valid
+
+    If a user clicks the login button on the log in page the redirect in the url is duplicated
+    If the redirect link is not valid the user is redirected home"""
     if link.count('redirect') > 0:
         link = 'home'
     return link

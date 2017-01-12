@@ -9,6 +9,15 @@ logger = logging.getLogger(__name__)
 
 
 def topic(request, topic_id):
+    """Returns the rendered page that shows the topic and the belonging comments
+
+    the method checks whether the request is GET (the user requested to see a topic) and POST (the user posted a comment)
+    The POST method checks if the user is logged in and in that case saves the comment to the database
+
+    Keyword arguments:
+    request -- HttpRequest object
+    topic_id -- the id of a topic to be displayed
+    """
     form_class = CommentPostForm
     template_name = 'forum/forum.html'
     curr_topic = Topic.objects.get(id=topic_id)
@@ -37,6 +46,14 @@ def topic(request, topic_id):
 
 
 def topic_heart(request, topic_id):
+    """Increments the heart count on a given topic
+
+    Can only be accessed by a logged in user
+
+    Keyword arguments:
+    request -- HttpRequest object
+    topic_id -- the id of a topic
+    """
     liked_topic = Topic.objects.get(id=topic_id)
     liked_topic.hearts += 1
     liked_topic.save()
@@ -44,6 +61,14 @@ def topic_heart(request, topic_id):
 
 
 def comment_heart(request, comment_id):
+    """Increments the heart count on a given comment
+
+    Can only be accessed by a logged in user
+
+    Keyword arguments:
+    request -- HttpRequest object
+    comment_id -- the id of a comment
+    """
     liked_comment = Comment.objects.get(id=comment_id)
     liked_comment.hearts += 1
     liked_comment.save()
@@ -51,6 +76,16 @@ def comment_heart(request, comment_id):
 
 
 def new_topic(request, device_id):
+    """Returns the rendered page that is used for writing new topics
+
+    The method checks whether the request is GET (the user requested a page used to write a new topic) and POST (the user posted a new topic)
+    The POST method checks if the user is logged in and in that case saves the topic to the database and redirects to that page
+
+
+    Keyword arguments:
+    request -- HttpRequest object
+    device_id -- the id of a device for redirect purposes
+    """
     form_class = TopicPostForm
     template_name = 'forum/new_topic.html'
 
@@ -73,6 +108,15 @@ def new_topic(request, device_id):
 
 
 def delete_comment(request, comment_id):
+    """Deletes the specified comment
+
+    Check if a user is logged in and if he is the one who posted the comment or if he has the delete permissions
+    In that case the comment is deleted from the database. Otherwise a 403 is returned telling the user he doesn't have permission
+
+    Keyword arguments:
+    request -- HttpRequest object
+    comment_id -- the id of a comment
+    """
     deleted_comment = Comment.objects.get(id=comment_id)
     if request.user.has_perm('forum.delete_comment') or request.user == deleted_comment.author:
         deleted_comment = Comment.objects.get(id=comment_id)
@@ -84,6 +128,15 @@ def delete_comment(request, comment_id):
 
 
 def delete_topic(request, topic_id):
+    """Deletes the specified comment
+
+    Check if a user is logged in and if he is the one who posted the topic or if he has the delete permissions
+    In that case the topic is deleted from the database. Otherwise a 403 is returned telling the user he doesn't have permission
+
+    Keyword arguments:
+    request -- HttpRequest object
+    topic_id -- the id of a comment
+    """
     deleted_topic = Topic.objects.get(id=topic_id)
     if request.user.has_perm('forum.delete_comment') or request.user == deleted_topic.author:
         current_device = deleted_topic.device

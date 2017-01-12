@@ -20007,3 +20007,59 @@ Traceback (most recent call last):
     (lookup_view_s, args, kwargs, len(patterns), patterns)
 NoReverseMatch: Reverse for 'forum' with arguments '(57,)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
 DEBUG 2017-01-10 14:43:52,320 views 51375 123145505107968 [Comment deleted] user: janezn; comment: komentarr; topic: Where can I buy Apple iPhone accessories?
+WARNING 2017-01-10 14:53:25,152 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 14:53:25,347 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 14:53:25,403 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 14:53:25,478 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 14:53:25,521 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 14:53:25,566 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 14:53:25,793 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 14:53:25,818 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 14:53:25,845 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 14:53:25,881 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 14:53:25,900 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 14:53:25,917 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 15:55:22,392 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 15:55:22,485 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 15:55:22,515 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 15:55:22,529 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 15:55:22,544 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 15:55:22,560 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 15:55:22,688 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 15:55:22,701 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 15:55:22,715 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 15:55:22,730 base 51811 123145332236288 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 15:55:22,749 base 51811 123145332236288 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 15:55:22,762 base 51811 123145332236288 Not Found: /favicon.ico
+WARNING 2017-01-10 18:39:22,047 base 56257 123145402650624 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 18:39:22,181 base 56257 123145402650624 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 18:39:22,203 base 56257 123145402650624 Not Found: /favicon.ico
+WARNING 2017-01-10 18:39:22,256 base 56257 123145402650624 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 18:39:22,275 base 56257 123145402650624 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 18:39:22,303 base 56257 123145402650624 Not Found: /favicon.ico
+WARNING 2017-01-10 18:39:22,447 base 56257 123145402650624 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 18:39:22,461 base 56257 123145402650624 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 18:39:22,475 base 56257 123145402650624 Not Found: /favicon.ico
+WARNING 2017-01-10 18:39:22,490 base 56257 123145402650624 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-10 18:39:22,509 base 56257 123145402650624 Not Found: /apple-touch-icon.png
+WARNING 2017-01-10 18:39:22,533 base 56257 123145402650624 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:39,833 base 57688 123145442127872 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-11 06:09:39,935 base 57688 123145442127872 Not Found: /apple-touch-icon.png
+WARNING 2017-01-11 06:09:39,949 base 57688 123145442127872 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:39,963 base 57688 123145442127872 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-11 06:09:39,982 base 57688 123145442127872 Not Found: /apple-touch-icon.png
+WARNING 2017-01-11 06:09:39,997 base 57688 123145442127872 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:40,066 base 57688 123145442127872 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-11 06:09:40,080 base 57688 123145442127872 Not Found: /apple-touch-icon.png
+WARNING 2017-01-11 06:09:40,095 base 57688 123145442127872 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:40,108 base 57688 123145442127872 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-11 06:09:40,123 base 57688 123145442127872 Not Found: /apple-touch-icon.png
+WARNING 2017-01-11 06:09:40,136 base 57688 123145442127872 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:42,660 base 57688 123145442127872 Not Found: /favicon.ico
+WARNING 2017-01-11 06:09:42,987 base 57688 123145442127872 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2017-01-11 06:09:43,006 base 57688 123145442127872 Not Found: /apple-touch-icon.png
+WARNING 2017-01-11 06:22:51,793 csrf 57688 123145442127872 Forbidden (CSRF token missing or incorrect.): /admin/devices/device/add/
+WARNING 2017-01-11 06:23:01,567 csrf 57688 123145442127872 Forbidden (CSRF token missing or incorrect.): /admin/devices/device/add/
+DEBUG 2017-01-11 09:20:51,807 views 58935 123145535541248 [Comment deleted] user: janezn; comment: djhlshjfds
+; topic: What are all the differences between the 9.7" iPad Pro and 12.9" iPad Pro? Which is best for me?
+

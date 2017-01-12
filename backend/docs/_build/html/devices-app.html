@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Devices app &#8212; GadgetFreak 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to GadgetFreak’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="devices-app">
+<h1>Devices app<a class="headerlink" href="#devices-app" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-devices.models">
+<span id="models"></span><h2>Models<a class="headerlink" href="#module-devices.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="devices.models.Brand">
+<em class="property">class </em><code class="descclassname">devices.models.</code><code class="descname">Brand</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Brand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing the Brand object</p>
+<p>This class represents the brand of a device, it is a mandatory foreign key in Device class</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="devices.models.Device">
+<em class="property">class </em><code class="descclassname">devices.models.</code><code class="descname">Device</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing the Device object</p>
+<dl class="method">
+<dt id="devices.models.Device.is_running_android">
+<code class="descname">is_running_android</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Device.is_running_android" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if device is running Android</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="devices.models.Device.rating_score">
+<code class="descname">rating_score</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Device.rating_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average score of the device</p>
+<p>The overall score has a weight of 3, all others have a weight of 1
+The function returns a float</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="devices.models.Device.rating_score_rounded">
+<code class="descname">rating_score_rounded</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Device.rating_score_rounded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rounds the returned value of rating_score function and returnes it</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="devices.models.Os">
+<em class="property">class </em><code class="descclassname">devices.models.</code><code class="descname">Os</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.models.Os" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing the Os object</p>
+<p>This class represents the operating system of a device, it is a mandatory foreign key in Brand class</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-devices.views">
+<span id="views"></span><h2>Views<a class="headerlink" href="#module-devices.views" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="devices.views.brand">
+<code class="descclassname">devices.views.</code><code class="descname">brand</code><span class="sig-paren">(</span><em>request</em>, <em>brand_id</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.brand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of devices that belong to the specified brand</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object
+brand_id &#8211; brand of which devices should be displayed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.brands">
+<code class="descclassname">devices.views.</code><code class="descname">brands</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.brands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rendered page that shows all of the brands</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.budget">
+<code class="descclassname">devices.views.</code><code class="descname">budget</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.budget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of devices that have the highest price rating</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.device">
+<code class="descclassname">devices.views.</code><code class="descname">device</code><span class="sig-paren">(</span><em>request</em>, <em>device_id</em>, <em>show_count=5</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rendered page that shows the details of a requested device</p>
+<p>The method calculates how many topics should be displayed and icrements the number of views</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object
+device_id &#8211; the id of a device to be displayed
+show_count &#8211; the number of topics that are currently displayed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.just_released">
+<code class="descclassname">devices.views.</code><code class="descname">just_released</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.just_released" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of devices that have the most recent release date</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.show_more">
+<code class="descclassname">devices.views.</code><code class="descname">show_more</code><span class="sig-paren">(</span><em>request</em>, <em>device_id</em>, <em>show_count=5</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.show_more" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the url that specifies how many topics should be displayed and redirects to that page</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object
+device_id &#8211; the id of a device to be displayed
+show_count &#8211; the number of topics that are currently displayed</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="devices.views.top_rated">
+<code class="descclassname">devices.views.</code><code class="descname">top_rated</code><span class="sig-paren">(</span><em>request</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.views.top_rated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of devices that have the highest overall rating</p>
+<p>Keyword arguments:
+request &#8211; HttpRequest object</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-devices.tests">
+<span id="tests"></span><h2>Tests<a class="headerlink" href="#module-devices.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="devices.tests.DeviceTest">
+<em class="property">class </em><code class="descclassname">devices.tests.</code><code class="descname">DeviceTest</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="headerlink" href="#devices.tests.DeviceTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing tests connected to the device app</p>
+<dl class="method">
+<dt id="devices.tests.DeviceTest.setUp">
+<code class="descname">setUp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.tests.DeviceTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method that sets up all of the objects used in the test class</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="devices.tests.DeviceTest.test_device_os">
+<code class="descname">test_device_os</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.tests.DeviceTest.test_device_os" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests whether the is_running_android method is working</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="devices.tests.DeviceTest.test_device_rating">
+<code class="descname">test_device_rating</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#devices.tests.DeviceTest.test_device_rating" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests whether the rating methods are working</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Devices app</a><ul>
+<li><a class="reference internal" href="#module-devices.models">Models</a></li>
+<li><a class="reference internal" href="#module-devices.views">Views</a></li>
+<li><a class="reference internal" href="#module-devices.tests">Tests</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to GadgetFreak&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/devices-app.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Aljaž.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      
+      |
+      <a href="_sources/devices-app.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

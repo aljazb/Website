@@ -3,6 +3,7 @@ from django import forms
 
 
 class RegisterForm(forms.ModelForm):
+    """Form used for registering a user"""
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:
@@ -11,6 +12,7 @@ class RegisterForm(forms.ModelForm):
 
 
 class LoginForm(forms.ModelForm):
+    """Form used for logging in a user"""
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:

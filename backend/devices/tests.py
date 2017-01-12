@@ -3,8 +3,9 @@ from .models import Device, Brand, Os
 
 
 class DeviceTest(TestCase):
-
+    """Class representing tests connected to the device app"""
     def setUp(self):
+        """Method that sets up all of the objects used in the test class"""
         android = Os.objects.create(name='Android')
         ios = Os.objects.create(name='iOS')
         windows = Os.objects.create(name='Windows Phone')
@@ -28,6 +29,7 @@ class DeviceTest(TestCase):
                                 memory='', camera='', battery='', views=0)
 
     def test_device_os(self):
+        """Tests whether the is_running_android method is working"""
         android_device = Device.objects.get(name="Pixel")
         ios_device = Device.objects.get(name="iPhone")
         windows_device = Device.objects.get(name="Lumia")
@@ -37,6 +39,7 @@ class DeviceTest(TestCase):
         self.assertIs(windows_device.is_running_android(), False)
 
     def test_device_rating(self):
+        """Tests whether the rating methods are working"""
         android_device = Device.objects.get(name="Pixel")
         ios_device = Device.objects.get(name="iPhone")
         windows_device = Device.objects.get(name="Lumia")
