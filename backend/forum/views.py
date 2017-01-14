@@ -4,6 +4,7 @@ from .forms import CommentPostForm, TopicPostForm
 from devices.models import Device
 from django.http import HttpResponseForbidden, Http404
 import logging
+import re
 
 logger = logging.getLogger(__name__)
 
@@ -32,12 +33,14 @@ def topic(request, topic_id):
     elif request.method == 'POST':
         user = request.user
         form = form_class(request.POST)
+        comment_pattern = re.compile('^[.,a-zA-Z ]+$')
+        body = request.POST['body']
 
-        if user is not None:
+        if user is not None and comment_pattern.match(body):
             comment = form.save(commit=False)
             comment.topic = curr_topic
             comment.author = user
-            comment.body = request.POST['body']
+            comment.body = body
             comment.hearts = 0
             comment.save()
             return redirect('/forum/' + topic_id)
@@ -94,12 +97,14 @@ def new_topic(request, device_id):
     elif request.method == 'POST':
         user = request.user
         form = form_class(request.POST)
+        topic_pattern = re.compile('^[.,a-zA-Z ]+$')
+        body = request.POST['body']
 
-        if user is not None:
+        if user is not None and topic_pattern.match(body):
             new_topic_device = form.save(commit=False)
             new_topic_device.device = Device.objects.get(id=device_id)
             new_topic_device.author = user
-            new_topic_device.body = request.POST['body']
+            new_topic_device.body = body
             new_topic_device.hearts = 0
             new_topic_device.save()
             return redirect('/forum/' + str(new_topic_device.id))

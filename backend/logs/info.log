@@ -20063,3 +20063,159 @@ WARNING 2017-01-11 06:23:01,567 csrf 57688 123145442127872 Forbidden (CSRF token
 DEBUG 2017-01-11 09:20:51,807 views 58935 123145535541248 [Comment deleted] user: janezn; comment: djhlshjfds
 ; topic: What are all the differences between the 9.7" iPad Pro and 12.9" iPad Pro? Which is best for me?
 
+WARNING 2017-01-14 11:30:28,356 base 80891 123145564418048 Not Found: /favicon.ico
+ERROR 2017-01-14 11:30:49,383 exception 80891 123145564418048 Internal Server Error: /en-us/new-topic
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 67, in post
+    topic = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Topic could not be created because the data didn't validate.
+ERROR 2017-01-14 11:44:32,011 exception 81234 123145355448320 Internal Server Error: /en-us/new-topic
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 67, in post
+    topic = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Topic could not be created because the data didn't validate.
+DEBUG 2017-01-14 11:48:11,303 views 81343 123145338892288 [Comment deleted] user: janezn; comment: no way; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+ERROR 2017-01-14 11:48:13,696 exception 81343 123145326272512 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+ERROR 2017-01-14 11:48:45,819 exception 81365 123145381994496 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+ERROR 2017-01-14 11:50:32,083 exception 81398 123145375817728 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+ERROR 2017-01-14 11:52:00,763 exception 81425 123145474220032 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+ERROR 2017-01-14 11:53:23,743 exception 81474 123145358995456 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 36, in topic
+    comment_pattern = re.compile('^[a-zA-Z0-9._- ]+$')
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.py", line 194, in compile
+    return _compile(pattern, flags)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/re.py", line 251, in _compile
+    raise error, v # invalid expression
+error: bad character range
+ERROR 2017-01-14 11:54:52,750 exception 81511 123145564524544 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+ERROR 2017-01-14 11:56:01,362 exception 81552 123145399373824 Internal Server Error: /en-us/forum/30
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/forum/views.py", line 40, in topic
+    comment = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Comment could not be created because the data didn't validate.
+DEBUG 2017-01-14 11:56:25,374 views 81563 123145355902976 [Comment deleted] user: janezn; comment: fdsfds, sdfdsf Adjffd; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:26,911 views 81563 123145355902976 [Comment deleted] user: janezn; comment: neki; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:27,721 views 81563 123145355902976 [Comment deleted] user: janezn; comment: drugo; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:29,342 views 81563 123145355902976 [Comment deleted] user: janezn; comment: sdd; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:29,953 views 81563 123145355902976 [Comment deleted] user: janezn; comment: dsd sdd; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:32,018 views 81563 123145355902976 [Comment deleted] user: janezn; comment: df.fdf; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:32,638 views 81563 123145355902976 [Comment deleted] user: janezn; comment: kfdlsjf, fdsdfd; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:33,207 views 81563 123145355902976 [Comment deleted] user: janezn; comment: sdfd; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+DEBUG 2017-01-14 11:56:33,790 views 81563 123145355902976 [Comment deleted] user: janezn; comment: aa aa; topic: Under Armour brings a suite of fitness apps to Samsung Gear devices
+ERROR 2017-01-14 11:57:51,690 exception 81591 123145494712320 Internal Server Error: /en-us/new-topic
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Library/Python/2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Library/Python/2.7/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/Aljaz/Documents/gadget_freak/backend/home/views.py", line 67, in post
+    topic = form.save(commit=False)
+  File "/Library/Python/2.7/site-packages/django/forms/models.py", line 448, in save
+    'created' if self.instance._state.adding else 'changed',
+ValueError: The Topic could not be created because the data didn't validate.
+DEBUG 2017-01-14 11:59:36,551 views 81623 123145471389696 [Topic deleted] user: janezn; topic: fdsdf

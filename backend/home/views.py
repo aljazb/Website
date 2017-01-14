@@ -4,6 +4,7 @@ from devices.models import Device
 from forum.forms import TopicPostForm
 from django.shortcuts import render, redirect
 from django.views.generic import View
+import re
 
 DEFAULT_TOPIC_COUNT = 5
 EXPAND_COUNT = 5
@@ -62,11 +63,13 @@ class NewTopicFormView(View):
         """Checks if the user is logged in and in that case saves the topic to the database and redirects to that page"""
         user = request.user
         form = self.form_class(request.POST)
+        body = request.POST['body']
+        topic_pattern = re.compile('^[.,a-zA-Z ]+$')
 
-        if user is not None:
+        if user is not None and topic_pattern.match(body):
             topic = form.save(commit=False)
             topic.author = user
-            topic.body = request.POST['body']
+            topic.body = body
             topic.hearts = 0
             topic.save()
             return redirect('/forum/' + str(topic.id))
