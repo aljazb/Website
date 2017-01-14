@@ -500,7 +500,7 @@ time {
 }
 
 .rating_text {
-    display: inline-block;  
+    display: inline-block;
     width: 100px;
     height: 5px;
     margin: 0;
@@ -508,7 +508,7 @@ time {
 }
 
 .stars_group {
-    display: inline; 
+    display: inline;
     width: 50%;
 }
 
@@ -557,7 +557,7 @@ Button[type=submit], #snap_photo {
     vertical-align: text-top;
     float: left;
     margin: 10px;
-    
+
 }
 
 #graph_canvas {
@@ -669,24 +669,24 @@ th {
     body {
         width: 90%;
     }
-    
+
     .side_menu, .left_device_list, .right_device_list, .side_menu_devices {
         width: 100%;
         float: left;
     }
-    
+
     .discussion_right {
         display: none;
     }
-    
+
     .device_info_big {
         width: 70%;
     }
-    
+
     .device_info_full {
         width: 40%;
     }
-    
+
     #graph_canvas {
         float: none;
     }
@@ -696,22 +696,22 @@ th {
     .menu_link {
         display: block;
     }
-    
+
     .device_icon_big {
         display: none;
         width: 0px;
         height: 0px;
     }
-    
+
     .device_info_full {
         width: 70%;
     }
-    
+
     #left_camera_section {
         width: 70%;
         height: auto;
     }
-    
+
     #camera_canvas {
         width: 70%;
         height: auto;
@@ -724,20 +724,20 @@ th {
         width: 0px;
         height: 0px;
     }
-    
+
     .device_info {
         width: 100%;
     }
-    
+
     .menu_title_divided a {
         padding-left: 0;
         padding-right: 0;
     }
-    
+
     #title {
         font-size: 17px;
     }
-    
+
     .star_icon {
         height: 13px;
         width: auto;
